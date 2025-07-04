@@ -34,14 +34,38 @@ Follow these steps to set up the project locally:
 - **app/**  
   Main Next.js application code, including pages and layouts.
 
+- **app/(name)/**  
+  A route-group folder. Does not affect the url.
+
+- **app/fests/**  
+  Contains the page.tsx file available at /fests url.
+
+- **app/fests/\[festname]/**  
+  Contains the page.tsx file available at /fests/festname url.
+
+- **app/fests/layout.tsx**  
+  Layout file applies to both /fests and /fests/festname url.
+
 - **components/**  
   Reusable React components, including ShadCN UI components.
+
+- **components/ui**  
+  ShadCN UI components.
+
+- **components/shared**  
+  React components shared between pages.
+
+- **components/home**  
+  React components for home page.
 
 - **lib/**  
   Utility functions and libraries.
 
-- **styles/**  
-  Global and component-specific styles (Tailwind CSS configuration).
+- **hooks/**  
+  React custom hooks.
+
+- **providers/**  
+  React context providers.
 
 - **public/**  
   Static assets such as images and icons.

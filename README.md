@@ -8,11 +8,12 @@
 
 Follow these steps to set up the project locally:
 
-1. **Clone the repository:**
+1. **Fork the repository** on GitHub.
+
+2. **Clone your forked repository:**
    ```bash
-   git clone <repository-url>
-   cd iitjsenateportal
-   ```
+   git clone <your-forked-repo-url>
+   cd
 
 2. **Install dependencies:**
    ```bash

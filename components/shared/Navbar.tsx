@@ -10,11 +10,13 @@ export default function Navbar() {
         {/* Left: Logo + Text */}
         <Link href='/' className="flex items-center gap-4 cursor-pointer">
           <Avatar className="h-16 w-16">
-            <AvatarImage src="/images/iitjlogo2.webp" alt="Logo" />
+            <AvatarImage src="/images/iitjlogo.png" alt="Logo" />
             <AvatarFallback />
           </Avatar>
           <div className="leading-tight">
-            <h1 className="text-lg font-semibold text-gray-200">Student senate</h1>
+            <h1 className="text-lg font-semibold text-gray-200">
+              Student Senate
+            </h1>
             <p className="text-sm text-gray-300">IIT Jodhpur</p>
           </div>
         </Link>

@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { Typewriter } from 'react-simple-typewriter'
 
 const images = [
   "/iitj1.jpg",
@@ -39,7 +40,15 @@ export default function Hero() {
       <div className="relative z-10 flex h-full items-center justify-center">
         <div className="p-8 rounded-md">
           <h1 className="text-3xl md:text-4xl font-semibold text-white text-center">
-            Welcome to IITJ<br />Student Senate
+            <Typewriter
+                words={['Welcome to IITJ Senate Portal']}
+                loop={0}
+                typeSpeed={60}
+                deleteSpeed={60}
+                delaySpeed={5000} // delay before re-typing
+                cursor
+                cursorStyle=""
+              />
           </h1>
         </div>
       </div>

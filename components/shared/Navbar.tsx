@@ -2,6 +2,7 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Link from "next/link"
+import { Typewriter } from 'react-simple-typewriter'
 
 export default function Navbar() {
   return (
@@ -14,10 +15,18 @@ export default function Navbar() {
             <AvatarFallback />
           </Avatar>
           <div className="leading-tight">
-            <h1 className="text-lg font-semibold text-gray-200">
-              Student Senate
+            <h1 className="text-2xl font-semibold text-gray-100">
+              <Typewriter
+                words={['Senate Portal IIT Jodhpur']}
+                loop={0}
+                typeSpeed={60}
+                deleteSpeed={60}
+                delaySpeed={5000} // delay before re-typing
+                cursor
+                cursorStyle="|"
+              />
             </h1>
-            <p className="text-sm text-gray-300">IIT Jodhpur</p>
+            <p className="text-sm text-gray-300"></p>
           </div>
         </Link>
 

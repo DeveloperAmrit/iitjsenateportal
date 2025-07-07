@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Typewriter } from 'react-simple-typewriter'
+
 
 const images = [
   "/iitj1.jpg",
@@ -20,7 +20,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative w-full h-[550px] overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden"> 
       {/* Background Images Layer */}
       <div className="absolute inset-0 z-0">
         {images.map((img, i) => (
@@ -32,24 +32,23 @@ export default function Hero() {
             style={{ backgroundImage: `url(/images/${img})` }}
           />
         ))}
-        {/* Optional dark overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        
       </div>
 
       {/* Text Content */}
       <div className="relative z-10 flex h-full items-center justify-center">
         <div className="p-8 rounded-md">
           <h1 className="text-3xl md:text-4xl font-semibold text-white text-center">
-            <Typewriter
-                words={['Welcome to IITJ Senate Portal']}
-                loop={0}
-                typeSpeed={60}
-                deleteSpeed={60}
-                delaySpeed={5000} // delay before re-typing
-                cursor
-                cursorStyle=""
-              />
+            Welcome to Student Senate.
           </h1>
+          <div className="flex items-center justify-center pt-5">
+            <div className="flex-grow border-b border-white"></div> 
+            <p className="text-2xl md:text-2xl text-white text-center mx-4">About</p>
+            <div className="flex-grow border-b border-white"></div> 
+          </div>
+          <div className="flex items-center justify-center">
+            <p className="text-lg md:text-1xl text-white text-center mx-4">The IITJ Student Senate strengthens the institute and student development by shaping policies, representing student voices, and coordinating key initiatives. It fosters collaboration, drives continuous improvement, and ensures effective advocacy for the student community’s needs and aspirations.</p>
+          </div>
         </div>
       </div>
     </section>

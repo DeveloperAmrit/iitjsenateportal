@@ -28,8 +28,27 @@ export const BCCAClubs = [
         description: "Club focused on improving programming skills through contests, peer learning, and workshops.",
         imageurl: "/images/clubs/bcca/programming-club.png",
         holder: ""
+    },
+    {
+        title: "GDSC",
+        description: "Google Developer Student Club – formerly active tech community under Google Developers umbrella.",
+        imageurl: "/images/clubs/bcca/gdsc.png",
+        holder: ""
+    },
+    {
+        title: "RAID",
+        description: "RAID was a club focused on AI/ML, research and development before being merged or dissolved.",
+        imageurl: "/images/clubs/bcca/raid.png",
+        holder: ""
+    },
+    {
+        title: "INSIDE",
+        description: "INSIDE worked on research and innovation, possibly merged into Nexus or other tech clubs.",
+        imageurl: "/images/clubs/bcca/inside.png",
+        holder: ""
     }
 ];
+
 
 export const BLAClubs = [
     {

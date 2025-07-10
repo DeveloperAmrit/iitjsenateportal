@@ -39,6 +39,16 @@ const Cards = () => {
         imageurl: club.imageurl,
     }));
 
+    const ACAC_clubs = [
+        ...bcca_items
+    ]
+
+    const SAC_clubs = [
+        ...bla_items,
+        ...bac_items,
+        ...bss_items
+    ]
+
 
     return (
         <div className='w-7xl mx-auto flex flex-col mt-24 gap-24 p-4'>
@@ -46,10 +56,8 @@ const Cards = () => {
             <CardGrid title='ACAC Boards' cols={5} items={acac_items} />
             <CardGrid title='SAC Boards' cols={5} items={sac_items} />
 
-            <InfiniteMarquee data={bcca_items} marqueeTitle='Clubs under BCCA'/>
-            <InfiniteMarquee data={bla_items} marqueeTitle='Clubs under BLA'/>
-            <InfiniteMarquee data={bac_items} marqueeTitle='Clubs under BAC'/>
-            <InfiniteMarquee data={bss_items} marqueeTitle='Clubs under BSS'/>
+            <InfiniteMarquee data={ACAC_clubs} marqueeTitle='Clubs under ACAC' minItemsPerRow={2} maxItemsPerRow={3}/>
+            <InfiniteMarquee data={SAC_clubs} marqueeTitle='Clubs under SAC' maxItemsPerRow={9}/>
         </div>
     )
 }

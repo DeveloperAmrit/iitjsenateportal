@@ -10,7 +10,7 @@ export default function Navbar() {
         {/* Left: Logo + Text */}
         <Link href='/' className="flex items-center gap-4 cursor-pointer">
           <Avatar className="h-16 w-16">
-            <AvatarImage src="/images/iitjlogo2.webp" alt="Logo" />
+            <AvatarImage src="/images/IITJ/logo/iitjlogo2.webp" alt="Logo" />
             <AvatarFallback />
           </Avatar>
           <div className="leading-tight">

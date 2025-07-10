@@ -29,7 +29,7 @@ export default function Hero() {
             className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
               i === index ? "opacity-100" : "opacity-0"
             }`}
-            style={{ backgroundImage: `url(/images/${img})` }}
+            style={{ backgroundImage: `url(/images/IITJ/hero/${img})` }}
           />
         ))}
         {/* Optional dark overlay */}
@@ -39,7 +39,7 @@ export default function Hero() {
       {/* Text Content */}
       <div className="relative z-10 flex h-full items-center justify-center">
         <div className="p-8 rounded-md">
-          <h1 className="text-3xl md:text-4xl font-semibold text-white text-center">
+          <h1 className="text-4xl md:text-5xl font-semibold text-white text-center">
             <Typewriter
                 words={['Welcome to IITJ Senate Portal']}
                 loop={0}

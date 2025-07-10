@@ -8,9 +8,17 @@ export const fests = [
         website: "https://varchas.iitj.ac.in",
         navlinks: [
             {
-                label: "Facebook",
+                label: "View in Detail",
                 href: "https://www.facebook.com/varchas.iitj",
-            }
+            },
+            {
+                label: "Website",
+                href: "https://www.facebook.com/varchas.iitj",
+            },
+            {
+                label: "Instagram",
+                href: "https://www.facebook.com/varchas.iitj",
+            },
         ]
     },
     {
@@ -22,9 +30,17 @@ export const fests = [
         website: "https://varchas.iitj.ac.in",
         navlinks: [
             {
-                label: "Facebook",
+                label: "View in Detail",
                 href: "https://www.facebook.com/varchas.iitj",
-            }
+            },
+            {
+                label: "Website",
+                href: "https://www.facebook.com/varchas.iitj",
+            },
+            {
+                label: "Instagram",
+                href: "https://www.facebook.com/varchas.iitj",
+            },
         ]
     },
     {
@@ -36,9 +52,17 @@ export const fests = [
         website: "https://varchas.iitj.ac.in",
         navlinks: [
             {
-                label: "Facebook",
+                label: "View in Detail",
                 href: "https://www.facebook.com/varchas.iitj",
-            }
+            },
+            {
+                label: "Website",
+                href: "https://www.facebook.com/varchas.iitj",
+            },
+            {
+                label: "Instagram",
+                href: "https://www.facebook.com/varchas.iitj",
+            },
         ]
     }
 ]

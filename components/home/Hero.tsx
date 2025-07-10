@@ -20,7 +20,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative w-full h-[550px] overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden">
       {/* Background Images Layer */}
       <div className="absolute inset-0 z-0">
         {images.map((img, i) => (

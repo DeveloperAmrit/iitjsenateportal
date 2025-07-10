@@ -3,6 +3,7 @@ import { councils } from '@/data/councils'
 import { ACACBoards, SACBoards } from '@/data/boards'
 import { BCCAClubs, BLAClubs, BACClubs, BSSClubs, } from '@/data/clubs'
 import CardGrid from '../shared/CardGrid'
+import InfiniteMarquee from '../shared/Marquee'
 
 
 const Cards = () => {
@@ -44,6 +45,11 @@ const Cards = () => {
             <CardGrid title='Councils' cols={3} items={council_items} />
             <CardGrid title='ACAC Boards' cols={5} items={acac_items} />
             <CardGrid title='SAC Boards' cols={5} items={sac_items} />
+
+            <InfiniteMarquee data={bcca_items} marqueeTitle='Clubs under BCCA'/>
+            <InfiniteMarquee data={bla_items} marqueeTitle='Clubs under BLA'/>
+            <InfiniteMarquee data={bac_items} marqueeTitle='Clubs under BAC'/>
+            <InfiniteMarquee data={bss_items} marqueeTitle='Clubs under BSS'/>
         </div>
     )
 }

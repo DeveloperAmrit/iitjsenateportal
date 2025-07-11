@@ -1,18 +1,18 @@
 export const councils = [
     {
-        title: "ACAC",
+        title: "Acadmic Co-Curricular and Activity Council",
         fullform: "Council of Academic Affairs and Curriculum",
-        imageurl: "/images/councils/acac.png",
+        imageurl: "/images/IITJ/logo/iitjlogo.png",
         holder: "Yash Golani"
     },
     {
-        title: "SS",
+        title: "Student Senate",
         fullform: "Student Senate",
         imageurl: "/images/councils/ss.png",
         holder: "Tharakdatta Hegde"
     },
     {
-        title: "SAC",
+        title: "Student Activity Council",
         fullform: "Student Activity Council",
         imageurl: "/images/councils/acac.png",
         holder: "Manas Chechani"

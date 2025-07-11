@@ -6,7 +6,7 @@ export const BCCAClubs = [
         holder: ""
     },
     {
-        title: "Robotics Soc",
+        title: "Robotics Society",
         description: "Society dedicated to robotics research, competitions, and hands-on projects.",
         imageurl: "/images/clubs/bcca/robotics-soc.png",
         holder: ""
@@ -18,7 +18,7 @@ export const BCCAClubs = [
         holder: ""
     },
     {
-        title: "Automobile Soc",
+        title: "Automobile Society",
         description: "Society passionate about automobile engineering, design, and motorsport activities.",
         imageurl: "/images/clubs/bcca/automobile-soc.png",
         holder: ""
@@ -30,20 +30,14 @@ export const BCCAClubs = [
         holder: ""
     },
     {
-        title: "GDSC",
-        description: "Google Developer Student Club – formerly active tech community under Google Developers umbrella.",
-        imageurl: "/images/clubs/bcca/gdsc.png",
-        holder: ""
-    },
-    {
         title: "RAID",
-        description: "RAID was a club focused on AI/ML, research and development before being merged or dissolved.",
+        description: "Realm of artificial intelligence",
         imageurl: "/images/clubs/bcca/raid.png",
         holder: ""
     },
     {
         title: "INSIDE",
-        description: "INSIDE worked on research and innovation, possibly merged into Nexus or other tech clubs.",
+        description: "Game devlopment society",
         imageurl: "/images/clubs/bcca/inside.png",
         holder: ""
     }

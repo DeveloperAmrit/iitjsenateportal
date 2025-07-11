@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center justify-between px-6 pb-2 gap-4">
         <div className="flex items-center gap-2 text-lg font-bold">
           {/* Example icon: IITJ logo or generic academic cap */}
-          <span className="inline-block w-7 h-7 bg-white rounded-full flex items-center justify-center mr-2">
+          <span className="w-7 h-7 bg-white rounded-full flex items-center justify-center mr-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

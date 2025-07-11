@@ -41,7 +41,7 @@ export default function Hero() {
         <div className="p-8 rounded-md">
           <h1 className="text-4xl md:text-5xl font-semibold text-white text-center">
             <Typewriter
-                words={['Welcome to IITJ Student Senate Portal']}
+                words={['Welcome to IITJ Student Senate']}
                 loop={0}
                 typeSpeed={60}
                 deleteSpeed={60}

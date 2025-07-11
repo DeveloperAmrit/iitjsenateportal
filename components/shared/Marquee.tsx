@@ -80,7 +80,7 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
                     alt={item.title}
                     width={32}
                     height={32}
-                    className="rounded-full object-cover"
+                    className="w-[32px] h-[32px] rounded-full object-cover"
                   />
                   <span className="w-full text-base font-medium text-center">{item.title}</span>
                 </div>

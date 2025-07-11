@@ -11,7 +11,8 @@ const images = [
   "/iitj5.jpg",
   "/iitj6.jpg",
   "/iitj7.jpg",
-  "/iitj8.jpg", // Add your image paths inside public/
+  "/iitj8.jpg",
+  "/iitj9.jpg", // Add your image paths inside public/
 ]
 
 export default function Hero() {

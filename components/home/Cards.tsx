@@ -52,12 +52,12 @@ const Cards = () => {
 
     return (
         <div className='w-7xl mx-auto flex flex-col mt-24 gap-24 p-4'>
-            <CardGrid title='Councils' cols={3} items={council_items} />
-            <CardGrid title='ACAC Boards' cols={5} items={acac_items} />
-            <CardGrid title='SAC Boards' cols={5} items={sac_items} />
+            <CardGrid title='Councils under Student Senate' cols={3} items={council_items} />
+            <CardGrid title='Boards under Academic and Cocurricular Activities' cols={5} items={acac_items} />
+            <CardGrid title='Boards under Student Activity Council' cols={5} items={sac_items} />
 
-            <InfiniteMarquee data={ACAC_clubs} marqueeTitle='Clubs under ACAC' minItemsPerRow={2} maxItemsPerRow={3}/>
-            <InfiniteMarquee data={SAC_clubs} marqueeTitle='Clubs under SAC' maxItemsPerRow={9}/>
+            <InfiniteMarquee data={ACAC_clubs} marqueeTitle='Societies under ACAC' minItemsPerRow={2} maxItemsPerRow={3}/>
+            <InfiniteMarquee data={SAC_clubs} marqueeTitle='Societies under SAC' maxItemsPerRow={9}/>
         </div>
     )
 }

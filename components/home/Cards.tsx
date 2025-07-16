@@ -28,8 +28,8 @@ const Cards: React.FC = () => {
       <InfiniteMarquee
         data={acacClubs}
         marqueeTitle="Societies under ACAC"
-        minItemsPerRow={2}
-        maxItemsPerRow={3}
+        minItemsPerRow={3}
+        maxItemsPerRow={6}
       />
       <InfiniteMarquee
         data={sacClubs}

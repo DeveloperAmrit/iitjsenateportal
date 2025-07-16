@@ -1,4 +1,5 @@
-"use client"
+// components/shared/InfiniteMarquee.tsx
+"use client";
 
 import React, { useEffect } from "react";
 import Marquee from "react-fast-marquee";
@@ -16,6 +17,7 @@ type InfiniteMarqueeProps = {
   marqueeTitle?: string;
   minItemsPerRow?: number;
   maxItemsPerRow?: number;
+  fadeWidth?: string; 
 };
 
 function chunkArray<T>(arr: T[], chunkSize: number): T[][] {
@@ -31,8 +33,8 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
   marqueeTitle = "Featured",
   minItemsPerRow = 3,
   maxItemsPerRow = 6,
+  fadeWidth = "150px", 
 }) => {
-  // Calculate items per row based on data length
   let itemsPerRow = Math.ceil(data.length / 2);
   itemsPerRow = Math.max(minItemsPerRow, Math.min(maxItemsPerRow, itemsPerRow));
   const rows = chunkArray(data, itemsPerRow);
@@ -50,6 +52,18 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
     }
   }, [controls, inView]);
 
+  const cardHoverVariant = {
+    scale: 1.05, 
+    boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.15)", 
+    y: -5, 
+    transition: {
+      type: "spring", 
+      stiffness: 300,
+      damping: 20,
+    },
+  };
+
+
   return (
     <motion.div
       ref={ref}
@@ -60,33 +74,57 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
       <h2 className="w-full text-center text-2xl font-bold mb-2">{marqueeTitle}</h2>
       <div className="flex flex-col gap-2">
         {rows.map((row, idx) => (
-          <Marquee
+          <div
             key={idx}
-            speed={40 + idx * 10}
-            pauseOnHover={false}
-            gradient={false}
-            direction={idx % 2 === 0 ? "left" : "right"}
-            className="py-1"
-            autoFill
+            className="relative overflow-hidden" 
+            style={{
+              maskImage: `linear-gradient(to right, 
+                rgba(0,0,0,0) 0%, 
+                rgba(0,0,0,1) ${fadeWidth}, 
+                rgba(0,0,0,1) calc(100% - ${fadeWidth}), 
+                rgba(0,0,0,0) 100%
+              )`,
+              WebkitMaskImage: `linear-gradient(to right, 
+                rgba(0,0,0,0) 0%, 
+                rgba(0,0,0,1) ${fadeWidth}, 
+                rgba(0,0,0,1) calc(100% - ${fadeWidth}), 
+                rgba(0,0,0,0) 100%
+              )`,
+            }}
           >
-            <div className="flex w-full justify-evenly">
-              {row.map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-x-4 gap-2 bg-white/80 rounded shadow px-4 py-2 mx-2 min-w-[180px] min-h-[80px] border-t border-gray-100"
-                >
-                  <Image
-                    src={item.imageurl}
-                    alt={item.title}
-                    width={32}
-                    height={32}
-                    className="rounded-full object-cover"
-                  />
-                  <span className="w-full text-base font-medium text-center">{item.title}</span>
-                </div>
-              ))}
-            </div>
-          </Marquee>
+            <Marquee
+              speed={40 + idx * 10}
+              pauseOnHover={true} 
+              gradient={false}
+              direction={idx % 2 === 0 ? "left" : "right"}
+              className="py-1"
+              autoFill
+            >
+              <div className="flex w-full justify-evenly">
+                {row.map((item, i) => (
+                  <motion.div
+                    key={i}
+                    className="flex items-center gap-x-4 bg-white/80 rounded shadow px-4 py-2 mx-2 min-w-[180px] min-h-[80px] border-t border-gray-100 relative"
+                    whileHover={cardHoverVariant}
+                    initial={false}
+                  >
+                    <Image
+                      src='/images/IITJ/logo/iitjlogo.png'
+                      alt={item.title}
+                      width={32}
+                      height={32}
+                      className="rounded-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = '/images/IITJ/logo/iitjlogo.png'; // Fallback
+                      }}
+                    />
+                    <span className="w-full text-base font-medium text-center truncate">{item.title}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </Marquee>
+          </div>
         ))}
       </div>
     </motion.div>

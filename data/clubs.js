@@ -12,7 +12,7 @@ export const BCCAClubs = [
         holder: ""
     },
     {
-        title: "Nexus",
+        title: "Nexus: The Astronomy Society",
         description: "A student group bridging technology and creativity through interdisciplinary projects.",
         imageurl: "/images/clubs/bcca/nexus.png",
         holder: ""
@@ -46,19 +46,19 @@ export const BCCAClubs = [
 
 export const BLAClubs = [
     {
-        title: "QuizSoc",
+        title: "Quiz Society",
         description: "Society that fosters a culture of curiosity through quizzes and trivia competitions.",
         imageurl: "/images/clubs/bla/quizsoc.png",
         holder: ""
     },
     {
-        title: "LitSoc",
+        title: "Literature Society",
         description: "Literary Society promoting creative writing, debates, poetry, and discussions.",
         imageurl: "/images/clubs/bla/litsoc.png",
         holder: ""
     },
     {
-        title: "Pheme",
+        title: "Pheme: The newsletter club",
         description: "Campus newsletter and journalism club focused on covering institute events and opinions.",
         imageurl: "/images/clubs/bla/pheme.png",
         holder: ""
@@ -67,13 +67,13 @@ export const BLAClubs = [
 
 export const BACClubs = [
     {
-        title: "TGT",
+        title: "The Groove Theory",
         description: "Theatre group of the campus fostering acting, scripting, and dramatics.",
         imageurl: "/images/clubs/bac/tgt.png",
         holder: ""
     },
     {
-        title: "Dramebaaz",
+        title: "Dramebaaz:The Dramatics Club",
         description: "Dramatics society known for skits, stage plays, and theatrical expression.",
         imageurl: "/images/clubs/bac/dramebaaz.png",
         holder: ""
@@ -85,7 +85,7 @@ export const BACClubs = [
         holder: ""
     },
     {
-        title: "Atliers",
+        title: "Ateliers",
         description: "Club dedicated to fine arts, painting, and crafts within the campus.",
         imageurl: "/images/clubs/bac/atliers.png",
         holder: ""
@@ -119,19 +119,19 @@ export const BACClubs = [
 
 export const BSSClubs = [
     {
-        title: "Cricket Soc",
+        title: "Cricket Society",
         description: "Society for cricket enthusiasts focusing on practice sessions, matches, and tournaments.",
         imageurl: "/images/clubs/bss/cricket-soc.png",
         holder: ""
     },
     {
-        title: "Lawn Tennis Soc",
+        title: "Lawn Tennis Society",
         description: "Society promoting lawn tennis through training, matches, and events.",
         imageurl: "/images/clubs/bss/lawn-tennis-soc.png",
         holder: ""
     },
     {
-        title: "Hockey Soc",
+        title: "Hockey Society",
         description: "Society for students passionate about field hockey, organizing practices and inter-college events.",
         imageurl: "/images/clubs/bss/hockey-soc.png",
         holder: ""
@@ -143,31 +143,31 @@ export const BSSClubs = [
         holder: ""
     },
     {
-        title: "Squash Soc",
+        title: "Squash Society",
         description: "Society encouraging squash as a competitive and recreational sport.",
         imageurl: "/images/clubs/bss/squash-soc.png",
         holder: ""
     },
     {
-        title: "Athletics Soc",
+        title: "Athletics Society",
         description: "Athletics society for track and field sports, organizing practice, training and competitions.",
         imageurl: "/images/clubs/bss/athletics-soc.png",
         holder: ""
     },
     {
-        title: "Cycling Soc",
+        title: "Cycling Society",
         description: "Society for promoting cycling as a sport and eco-friendly activity.",
         imageurl: "/images/clubs/bss/cycling-soc.png",
         holder: ""
     },
     {
-        title: "E-Sports Soc",
+        title: "Respwan:The E-Sports Society",
         description: "Gaming society hosting e-sports tournaments and gaming community events.",
         imageurl: "/images/clubs/bss/esports-soc.png",
         holder: ""
     },
     {
-        title: "Basketball Soc",
+        title: "Basketball Society",
         description: "Society focused on basketball training, inter-batch and inter-college tournaments.",
         imageurl: "/images/clubs/bss/basketball-soc.png",
         holder: ""
@@ -179,25 +179,25 @@ export const BSSClubs = [
         holder: ""
     },
     {
-        title: "Volleyball Soc",
+        title: "Volleyball Society",
         description: "Society organizing volleyball matches, training, and fostering sportsmanship.",
         imageurl: "/images/clubs/bss/volleyball-soc.png",
         holder: ""
     },
     {
-        title: "Badminton Soc",
+        title: "Badminton Society",
         description: "Society for badminton lovers to train, play, and represent in competitions.",
         imageurl: "/images/clubs/bss/badminton-soc.png",
         holder: ""
     },
     {
-        title: "Kabaddi Soc",
+        title: "Kabaddi Society",
         description: "Society promoting the traditional sport of kabaddi through regular sessions and events.",
         imageurl: "/images/clubs/bss/kabaddi-soc.png",
         holder: ""
     },
     {
-        title: "Chess Soc",
+        title: "Chess Society",
         description: "Society for developing strategic thinking through chess competitions and learning sessions.",
         imageurl: "/images/clubs/bss/chess-soc.png",
         holder: ""

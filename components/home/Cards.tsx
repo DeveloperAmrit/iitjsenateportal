@@ -6,6 +6,7 @@ import { BCCAClubs, BLAClubs, BACClubs, BSSClubs } from '@/data/clubs'
 import CardGrid from '../shared/CardGrid'
 import InfiniteMarquee from '../shared/Marquee'
 
+
 const mapItems = (arr: { title: string; imageurl: string }[]) =>
   arr.map(({ title, imageurl }) => ({ title, imageurl }))
 

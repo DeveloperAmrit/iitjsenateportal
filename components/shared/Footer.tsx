@@ -210,7 +210,7 @@ const Footer: React.FC = () => {
             <li><a href="#" className="hover:text-white transition">Student Senate</a></li>
             <li><a href="#" className="hover:text-white transition">Societies and Clubs</a></li>
             <li><a href="#" className="hover:text-white transition">Student Actvity Calender</a></li>
-            <li><a href="#" className="hover:text-white transition">Student Constitution</a></li>
+            <li><a href="#" className="hover:text-white transition">Student Council Constitution</a></li>
             <li><a href="student_grievance@iitj.ac.in" className="hover:text-white transition">Student Grievances</a></li>
             <li>
                 <button

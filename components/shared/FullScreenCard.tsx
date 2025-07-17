@@ -6,7 +6,7 @@ import Image from "next/image";
 
 type FullScreenCardProps = {
   backgroundUrl: string;
-  logoUrl: string;
+  logoUrl?: string;
   title: string;
   description: string;
   date?: string;
@@ -31,47 +31,47 @@ const FullScreenCard: React.FC<FullScreenCardProps> = ({
           src={backgroundUrl}
           alt="Background"
           fill
-          
-          className="object-cover object-center scale-105 transition-transform duration-700 ease-out group-hover:scale-100" 
+
+          className="object-cover object-center scale-105 transition-transform duration-700 ease-out group-hover:scale-100"
           priority
         />
-       
+
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
       </div>
 
       {/* Content Card Section: */}
       <motion.div
-        initial={{ opacity: 0, y: 100 }} 
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, type: "spring", bounce: 0.35 }} 
-        viewport={{ once: true, amount: 0.3 }} 
+        transition={{ duration: 0.9, type: "spring", bounce: 0.35 }}
+        viewport={{ once: true, amount: 0.3 }}
 
-        className="relative z-10 flex flex-col items-center p-8 sm:p-12 md:p-20 rounded-3xl shadow-2xl bg-white/3 backdrop-blur-lg border border-white/20 max-w-5xl w-full text-white overflow-hidden" 
+        className="relative z-10 flex flex-col items-center p-8 sm:p-12 md:p-20 rounded-3xl shadow-2xl bg-white/3 backdrop-blur-lg border border-white/20 max-w-5xl w-full text-white overflow-hidden"
       >
-  
-        <div className="absolute inset-0 bg-black/20 rounded-3xl" />
 
-        <div className="mb-8 mt-4"> 
+        <div className="absolute inset-0 bg-black/20 rounded-3xl -z-10" />
+
+        <div className="mb-8 mt-4">
           <Image
-            src='/images/IITJ/logo/iitjlogo.png'
-            alt="Event Logo" 
-            width={140} 
-            height={140} 
-            className="rounded-full shadow-xl border-4 border-white/50 object-cover" 
+            src={logoUrl || '/images/IITJ/logo/iitjlogo.png'}
+            alt="Event Logo"
+            width={140}
+            height={140}
+            className="rounded-full shadow-xl border-4 border-white/50 object-cover"
             priority
-            onError={(e) => { 
+            onError={(e) => {
               e.currentTarget.onerror = null;
-              e.currentTarget.src = '/images/placeholder-logo.png'; 
+              e.currentTarget.src = '/images/placeholder-logo.png';
             }}
           />
         </div>
 
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold drop-shadow-lg mb-4 text-center leading-tight"> 
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold drop-shadow-lg mb-4 text-center leading-tight">
           {title}
         </h1>
 
         {date && (
-          <div className="text-xl md:text-2xl font-semibold mb-6 text-center text-white/90 tracking-wide"> 
+          <div className="text-xl md:text-2xl font-semibold mb-6 text-center text-white/90 tracking-wide">
             {date}
           </div>
         )}
@@ -80,7 +80,7 @@ const FullScreenCard: React.FC<FullScreenCardProps> = ({
           {description}
         </p>
 
-        <div className="flex flex-wrap gap-5 md:gap-8 justify-center mt-4"> 
+        <div className="flex flex-wrap gap-5 md:gap-8 justify-center mt-4">
           {navLinks.map((link) => (
             <motion.a
               key={link.href}

@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useEffect } from "react";
@@ -17,7 +16,7 @@ type InfiniteMarqueeProps = {
   marqueeTitle?: string;
   minItemsPerRow?: number;
   maxItemsPerRow?: number;
-  fadeWidth?: string; 
+  fadeWidth?: string;
 };
 
 function chunkArray<T>(arr: T[], chunkSize: number): T[][] {
@@ -33,7 +32,7 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
   marqueeTitle = "Featured",
   minItemsPerRow = 3,
   maxItemsPerRow = 6,
-  fadeWidth = "150px", 
+  fadeWidth = "150px",
 }) => {
   let itemsPerRow = Math.ceil(data.length / 2);
   itemsPerRow = Math.max(minItemsPerRow, Math.min(maxItemsPerRow, itemsPerRow));
@@ -57,7 +56,7 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
     boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.15)", 
     y: -5, 
     transition: {
-      type: "spring", 
+      type: "spring" as const, 
       stiffness: 300,
       damping: 20,
     },
@@ -76,7 +75,7 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
         {rows.map((row, idx) => (
           <div
             key={idx}
-            className="relative overflow-hidden" 
+            className="relative overflow-hidden"
             style={{
               maskImage: `linear-gradient(to right, 
                 rgba(0,0,0,0) 0%, 
@@ -94,7 +93,7 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
           >
             <Marquee
               speed={40 + idx * 10}
-              pauseOnHover={true} 
+              pauseOnHover={true}
               gradient={false}
               direction={idx % 2 === 0 ? "left" : "right"}
               className="py-1"

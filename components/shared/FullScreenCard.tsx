@@ -6,7 +6,7 @@ import Image from "next/image";
 
 type FullScreenCardProps = {
   backgroundUrl: string;
-  logoUrl: string;
+  logoUrl?: string;
   title: string;
   description: string;
   date?: string;
@@ -53,7 +53,7 @@ const FullScreenCard: React.FC<FullScreenCardProps> = ({
 
         <div className="mb-8 mt-4">
           <Image
-            src='/images/IITJ/logo/iitjlogo.png'
+            src={logoUrl || '/images/IITJ/logo/iitjlogo.png'}
             alt="Event Logo"
             width={140}
             height={140}

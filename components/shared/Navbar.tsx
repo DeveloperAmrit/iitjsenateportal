@@ -30,7 +30,7 @@ export default function Navbar() {
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/senate", label: "Senate" },
+  { href: "/senate", label: "Student Senate" },
   { href: "/visit-iitj", label: "Visit IITJ" },
   { href: "/events", label: "Events" },
   { href: "/societies", label: "Societies" },

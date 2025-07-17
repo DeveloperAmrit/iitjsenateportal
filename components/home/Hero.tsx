@@ -6,7 +6,13 @@ import { Typewriter } from 'react-simple-typewriter'
 const images = [
   "/iitj1.jpg",
   "/iitj2.webp",
-  "/iitj4.jpg", // Add your image paths inside public/
+  "/iitj3.jpg",
+  "/iitj4.jpg",
+  "/iitj5.jpg",
+  "/iitj6.jpg",
+  "/iitj7.jpg",
+  "/iitj8.jpg",
+  "/iitj9.jpg", // Add your image paths inside public/
 ]
 
 export default function Hero() {
@@ -26,9 +32,8 @@ export default function Hero() {
         {images.map((img, i) => (
           <div
             key={i}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
-              i === index ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${i === index ? "opacity-100" : "opacity-0"
+              }`}
             style={{ backgroundImage: `url(/images/IITJ/hero/${img})` }}
           />
         ))}
@@ -39,17 +44,25 @@ export default function Hero() {
       {/* Text Content */}
       <div className="relative z-10 flex h-full items-center justify-center">
         <div className="p-8 rounded-md">
-          <h1 className="text-4xl md:text-5xl font-semibold text-white text-center">
+          <h1 className="text-4xl md:text-5xl font-semibold text-white text-center mb-8"> {/* Added mb-8 */}
             <Typewriter
-                words={['Welcome to IITJ Student Senate Portal']}
-                loop={0}
-                typeSpeed={60}
-                deleteSpeed={60}
-                delaySpeed={5000} // delay before re-typing
-                cursor
-                cursorStyle=""
-              />
+              words={['Welcome to IITJ Student Senate']}
+              loop={0}
+              typeSpeed={60}
+              deleteSpeed={60}
+              delaySpeed={5000}
+              cursor
+              cursorStyle="."
+            />
           </h1>
+          <div className="flex items-center justify-center pt-8 pb-4"> {/* Increased pt, added pb */}
+            <div className="w-24 border-b border-white" />
+            <p className="text-2xl md:text-3xl text-white text-center mx-6">About</p> {/* Increased mx */}
+            <div className="w-24 border-b border-white" />
+          </div>
+          <p className="text-xl md:text-2xl text-white text-center mx-auto max-w-7xl mt-8"> {/* Changed text size, added mx-auto max-w, mt */}
+            The student body at IIT Jodhpur is organized into the Senate, SAC, and ACAC, which collectively ensure holistic student development across academic, co-curricular, and extracurricular spheres.
+          </p>
         </div>
       </div>
     </section>

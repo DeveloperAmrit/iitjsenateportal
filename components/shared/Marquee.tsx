@@ -56,7 +56,7 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
     boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.15)", 
     y: -5, 
     transition: {
-      type: "spring", 
+      type: "spring" as const, 
       stiffness: 300,
       damping: 20,
     },

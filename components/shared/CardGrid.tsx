@@ -1,8 +1,7 @@
-
 "use client"
 
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 
 interface CardGridProps {
   cols: number
@@ -15,7 +14,7 @@ interface CardProps {
   imageurl: string
 }
 
-const popUpVariant = {
+const popUpVariant: Variants = {
   hidden: { opacity: 0.2, scale: 0.95 },
   visible: {
     opacity: 1,
@@ -32,12 +31,12 @@ const Card: React.FC<CardProps> = ({ title, imageurl }) => (
     viewport={{ once: false, amount: 0.3 }} // ← this makes it animate every time it enters view
     className="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300"
   >
-    <div className="h-48 bg-gray-100 overflow-hidden">
+    <div className="flex items-center justify-center h-48 bg-gray-100 overflow-hidden">
       <img
         src={imageurl}
         alt={title}
         loading="lazy"
-        className="w-full h-full object-cover"
+        className="h-48 object-cover"
         onError={(e) => {
           e.currentTarget.onerror = null
           e.currentTarget.src = '/images/IITJ/logo/iitjlogo.png'
@@ -45,7 +44,7 @@ const Card: React.FC<CardProps> = ({ title, imageurl }) => (
       />
     </div>
     <div className="p-6">
-      <h3 className="text-xl font-semibold text-gray-800 truncate">{title}</h3>
+      <h3 className="text-xl font-semibold text-gray-800 text-center">{title}</h3>
     </div>
   </motion.div>
 )

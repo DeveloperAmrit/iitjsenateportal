@@ -6,7 +6,13 @@ import { Typewriter } from 'react-simple-typewriter'
 const images = [
   "/iitj1.jpg",
   "/iitj2.webp",
-  "/iitj4.jpg", // Add your image paths inside public/
+  "/iitj3.jpg",
+  "/iitj4.jpg",
+  "/iitj5.jpg",
+  "/iitj6.jpg",
+  "/iitj7.jpg",
+  "/iitj8.jpg",
+  "/iitj9.jpg", // Add your image paths inside public/
 ]
 
 export default function Hero() {
@@ -39,17 +45,29 @@ export default function Hero() {
       {/* Text Content */}
       <div className="relative z-10 flex h-full items-center justify-center">
         <div className="p-8 rounded-md">
-          <h1 className="text-4xl md:text-5xl font-semibold text-white text-center">
-            <Typewriter
-                words={['Welcome to IITJ Student Senate']}
-                loop={0}
-                typeSpeed={60}
-                deleteSpeed={60}
-                delaySpeed={5000} // delay before re-typing
-                cursor
-                cursorStyle=""
-              />
-          </h1>
+            <h1 className="text-4xl md:text-5xl font-semibold text-white text-center mb-8"> {/* Added mb-8 */}
+                <Typewriter
+                    words={['Welcome to IITJ Student Senate']}
+                    loop={0}
+                    typeSpeed={60}
+                    deleteSpeed={60}
+                    delaySpeed={5000}
+                    cursor
+                    cursorStyle="."
+                />
+            </h1>
+            <div className="flex items-center justify-center pt-8 pb-4"> {/* Increased pt, added pb */}
+                <div className="w-24 border-b border-white" />
+                <p className="text-2xl md:text-3xl text-white text-center mx-6">About</p> {/* Increased mx */}
+                <div className="w-24 border-b border-white" />
+            </div>
+            <p className="text-xl md:text-2xl text-white text-center mx-auto max-w-7xl mt-8"> {/* Changed text size, added mx-auto max-w, mt */}
+                The student body at IIT Jodhpur is structured around three main pillars: the Student Senate, 
+            the Student Activity Council (SAC), and the Academic and Co-curricular Activity Council (ACAC). 
+            These bodies collectively work to represent student interests and manage various aspects of student life.
+            Together, these three pillars ensure a holistic approach to student development, covering academic, 
+            co-curricular, and extracurricular spheres, and fostering a well-rounded and participatory student community at IIT Jodhpur.
+            </p>
         </div>
       </div>
     </section>

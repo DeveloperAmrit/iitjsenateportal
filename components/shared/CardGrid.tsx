@@ -1,4 +1,4 @@
-// components/shared/CardGrid.tsx
+
 "use client"
 
 import React from 'react'

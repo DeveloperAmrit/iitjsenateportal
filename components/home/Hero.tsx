@@ -5,7 +5,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const images = [
   "/iitj1.jpg",
-  "/iitj2.webp",
+  "/iitj2.jpg",
   "/iitj3.jpg",
   "/iitj4.jpg",
   "/iitj5.jpg",
@@ -21,7 +21,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length)
-    }, 5000)
+    }, 7000)
     return () => clearInterval(interval)
   }, [])
 

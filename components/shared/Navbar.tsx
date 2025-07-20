@@ -28,17 +28,22 @@ export default function Navbar() {
   )
 }
 
-
-
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/senate", label: "Student Senate" },
   { href: "/visit-iitj", label: "Visit IITJ" },
   { href: "/events", label: "Events" },
   { href: "/societies", label: "Societies" },
-  { href: "/calendar", label: "Calendar" },
-  { href: "/constitution", label: "Constitution" },
+  {
+    href: "https://iitj.ac.in/PageImages/Gallery/07-2025/Academic-Calendar-AY-202526SemI2-with-CCCD-events-638871414539740843.pdf",
+    label: "Calendar"
+  },
+  {
+    href: "/pdfs/constitution.pdf", // Optional update if you want same behavior
+    label: "Constitution"
+  }
 ]
+
 
 function NavbarLinks() {
   return (
@@ -47,6 +52,8 @@ function NavbarLinks() {
         <Link
           key={href}
           href={href}
+          target={label === "Calendar" ? "_blank" : undefined}
+          rel={label === "Calendar" ? "noopener noreferrer" : undefined}
           className="relative group"
         >
           <span className="transition-colors duration-200">{label}</span>

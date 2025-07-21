@@ -39,11 +39,10 @@ const navLinks = [
     label: "Calendar"
   },
   {
-    href: "/pdfs/constitution.pdf", // Optional update if you want same behavior
+    href: "/pdfs/constitution.pdf",
     label: "Constitution"
   }
 ]
-
 
 function NavbarLinks() {
   return (
@@ -52,8 +51,8 @@ function NavbarLinks() {
         <Link
           key={href}
           href={href}
-          target={label === "Calendar" ? "_blank" : undefined}
-          rel={label === "Calendar" ? "noopener noreferrer" : undefined}
+          target={["Calendar", "Constitution"].includes(label) ? "_blank" : undefined}
+          rel={["Calendar", "Constitution"].includes(label) ? "noopener noreferrer" : undefined}
           className="relative group"
         >
           <span className="transition-colors duration-200">{label}</span>

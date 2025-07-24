@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react"
 import { Typewriter } from 'react-simple-typewriter'
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const images = [
   "/iitj1.jpg",
@@ -12,8 +15,8 @@ const images = [
   "/iitj6.jpg",
   "/iitj7.jpg",
   "/iitj8.jpg",
-  "/iitj9.jpg", // Add your image paths inside public/
-]
+  "/iitj9.jpg",
+];
 
 export default function Hero() {
   const [index, setIndex] = useState(0)
@@ -27,43 +30,51 @@ export default function Hero() {
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Background Images Layer */}
       <div className="absolute inset-0 z-0">
         {images.map((img, i) => (
           <div
             key={i}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${i === index ? "opacity-100" : "opacity-0"
-              }`}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${i === index ? "opacity-100" : "opacity-0"}`}
             style={{ backgroundImage: `url(/images/IITJ/hero/${img})` }}
           />
         ))}
-        {/* Optional dark overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      {/* Text Content */}
       <div className="relative z-10 flex h-full items-center justify-center">
-        <div className="p-8 rounded-md">
-          <h1 className="text-4xl md:text-5xl font-semibold text-white text-center mb-8"> {/* Added mb-8 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="p-8 rounded-md text-center"
+        >
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
             <Typewriter
-              words={['Welcome to IITJ Student Senate']}
+              words={['Welcome to the IITJ Student Senate']}
               loop={0}
-              typeSpeed={60}
-              deleteSpeed={60}
-              delaySpeed={5000}
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={5500}
               cursor
               cursorStyle="."
             />
           </h1>
-          <div className="flex items-center justify-center pt-8 pb-4"> {/* Increased pt, added pb */}
-            <div className="w-24 border-b border-white" />
-            <p className="text-2xl md:text-3xl text-white text-center mx-6">About</p> {/* Increased mx */}
-            <div className="w-24 border-b border-white" />
-          </div>
-          <p className="text-xl md:text-2xl text-white text-center mx-auto max-w-7xl mt-8"> {/* Changed text size, added mx-auto max-w, mt */}
-            The student body at IIT Jodhpur is organized into the Senate, SAC, and ACAC, which collectively ensure holistic student development across academic, co-curricular, and extracurricular spheres.
+          <p className="text-xl md:text-2xl text-gray-200 mx-auto max-w-3xl mt-4 mb-8">
+            Your official portal for all student activities, councils, and events at IIT Jodhpur. We are committed to fostering a vibrant and inclusive campus community.
           </p>
-        </div>
+          <div className="flex items-center justify-center gap-4">
+            <Link href="/events">
+              <Button size="lg" className="bg-fulvous text-white hover:bg-fulvous/90">
+                Explore Events
+              </Button>
+            </Link>
+            <Link href="/senate">
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                About the Senate
+              </Button>
+            </Link>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

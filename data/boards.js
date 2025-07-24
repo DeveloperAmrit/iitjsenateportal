@@ -1,4 +1,3 @@
-
 export const ACACBoards = [
     {
         title: "Board of Academic Interaction (BAI)",
@@ -31,7 +30,7 @@ export const ACACBoards = [
         holder: "Vyom Shah"
     },
     {
-        title: "Board of Co-Curricular Affairs (BCCA)",
+        title: "Board of Co Curricular Affairs (BCCA)",
         fullform: "Board of Co-Curricular Affairs",
         imageurl: "/images/boards/acac/bcca.png",
         holder: "Sambhav Jha"
@@ -40,31 +39,31 @@ export const ACACBoards = [
 
 export const SACBoards = [
     {
-        title: "Board of Art & Culture",
+        title: "Board of Art & Culture (BAC)",
         fullform: "Board of Art & Culture",
         imageurl: "/images/boards/sac/bac.png",
         holder: "Vaibhav Singh"
     },
     {
-        title: "Board of Student Sports",
+        title: "Board of Student Sports (BSS)",
         fullform: "Board of Student Sports",
         imageurl: "/images/boards/sac/bss.png",
         holder: "Sudhanshu Tamhankar"
     },
     {
-        title: "Board of Student Welfare",
+        title: "Board of Student Welfare (BSW)",
         fullform: "Board of Student Welfare",
         imageurl: "/images/boards/sac/bsw.png",
-        holder: "NOT FOUND" // No name provided in image
+        holder: "NOT FOUND" 
     },
     {
-        title: "Board of Literary Affairs",
+        title: "Board of Literary Affairs (BLA)",
         fullform: "Board of Literary Affairs",
         imageurl: "/images/boards/sac/bla.png",
         holder: "Anshit Agarwal"
     },
     {
-        title: "Board of Hostel Affairs",
+        title: "Board of Hostel Affairs (BHA)",
         fullform: "Board of Hostel Affairs",
         imageurl: "/images/boards/sac/bha.png",
         holder: "Harsh Kumar"

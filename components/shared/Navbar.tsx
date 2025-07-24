@@ -31,7 +31,6 @@ export default function Navbar() {
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/senate", label: "Student Senate" },
-  { href: "/visit-iitj", label: "Visit IITJ" },
   { href: "/events", label: "Events" },
   { href: "/societies", label: "Societies" },
   {
@@ -41,7 +40,8 @@ const navLinks = [
   {
     href: "/pdfs/constitution.pdf", // Optional update if you want same behavior
     label: "Constitution"
-  }
+  },
+  { href: "/visit-iitj", label: "Visit IITJ" }
 ]
 
 

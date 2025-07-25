@@ -21,12 +21,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} font-sans antialiased`}
-      >
-        <Navbar/>
+      <head>
+        {/* Add custom fonts here */}
+        <link
+          href="https://fonts.cdnfonts.com/css/ica-rubrik-black"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.cdnfonts.com/css/poppins"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`${inter.variable} font-sans antialiased`}>
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

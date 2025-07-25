@@ -183,23 +183,23 @@ const Footer: React.FC = () => {
             height={100}
             className="mb-4 rounded-full"
           />
-          <p className="text-lg font-semibold text-gray-50 mb-1">Indian Institute of Technology Jodhpur</p>
-          <p className="text-sm text-gray-300 mb-4">
+          <p className="text-lg font-semibold text-gray-50 mb-1">Student Senate, IITJ</p>
+          {/* <p className="text-sm text-gray-300 mb-4">
             NH 62, Nagaur Road, Karwar, Jodhpur,<br />
             Rajasthan 342037, India
-          </p>
+          </p> */}
           <div className="flex flex-col items-center md:items-start text-sm text-gray-300">
-            <a href="tel:+912912801000" className="flex items-center hover:text-white transition mb-1">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684L10.5 9.87a1 1 0 00.54.54l3.725 1.964a1 1 0 00.684.948H19a2 2 0 012 2v1a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-              0291-2801000
+            <a href="mailto:info@iitj.ac.in" className="flex items-center hover:text-white transition mb-1">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 6h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              gensecy_ss@iitj.ac.in
             </a>
             <a href="mailto:info@iitj.ac.in" className="flex items-center hover:text-white transition mb-1">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 6h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              info@iitj.ac.in
+              gensecy_acac@iitj.ac.in
             </a>
-            <a href="https://www.iitj.ac.in" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-white transition">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-              www.iitj.ac.in
+            <a href="mailto:info@iitj.ac.in" className="flex items-center hover:text-white transition mb-1">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 6h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              gensecy_sac@iitj.ac.in
             </a>
           </div>
           <div className="flex gap-4 mt-6">
@@ -216,7 +216,7 @@ const Footer: React.FC = () => {
             <li><a href="https://www.iitj.ac.in/main/en/iitj" className="hover:text-white transition">Visit IITJ</a></li>
             <li><a href="#" className="hover:text-white transition">Student Senate</a></li>
             <li><a href="#" className="hover:text-white transition">Societies and Clubs</a></li>
-            <li><a href="#" className="hover:text-white transition">Student Actvity Calender</a></li>
+            <li><a href="https://iitj.ac.in/PageImages/Gallery/07-2025/Academic-Calendar-AY-202526SemI2-with-CCCD-events-638871414539740843.pdf" className="hover:text-white transition">Student Actvity Calender</a></li>
             <li><a href="#" className="hover:text-white transition">Student Constitution</a></li>
             <li><a href="mailto:student_grievance@iitj.ac.in" className="hover:text-white transition">Student Grievances</a></li>
             <li>

@@ -184,10 +184,9 @@ const Footer: React.FC = () => {
             className="mb-4 rounded-full"
           />
           <p className="text-lg font-semibold text-gray-50 mb-1">Student Senate, IITJ</p>
-          {/* <p className="text-sm text-gray-300 mb-4">
-            NH 62, Nagaur Road, Karwar, Jodhpur,<br />
-            Rajasthan 342037, India
-          </p> */}
+          <p className="text-sm text-gray-300 mb-4">
+            छात्र सीनेट, आईआईटीजे
+          </p>
           <div className="flex flex-col items-center md:items-start text-sm text-gray-300">
             <a href="mailto:info@iitj.ac.in" className="flex items-center hover:text-white transition mb-1">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 6h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>

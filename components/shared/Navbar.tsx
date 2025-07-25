@@ -53,7 +53,6 @@ const navLinks = [
   { href: "/visit-iitj", label: "Visit IITJ" }
 ]
 
-
 function NavbarLinks() {
   return (
     <nav className="hidden md:flex gap-8 text-base font-medium text-gray-200 items-center">
@@ -61,8 +60,8 @@ function NavbarLinks() {
         <Link
           key={href}
           href={href}
-          target={label === "Calendar" || label === "Constitution" ? "_blank" : undefined}
-          rel={label === "Calendar" || label === "Constitution" ? "noopener noreferrer" : undefined}
+          target={["Calendar", "Constitution"].includes(label) ? "_blank" : undefined}
+          rel={["Calendar", "Constitution"].includes(label) ? "noopener noreferrer" : undefined}
           className="relative group"
         >
           <span className="transition-colors duration-300 group-hover:text-fulvous">{label}</span>

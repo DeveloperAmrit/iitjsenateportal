@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
+import Link from 'next/link';
 
 const popUpVariant: Variants = {
   hidden: { opacity: 0.2, scale: 0.95 },
@@ -15,12 +16,13 @@ const popUpVariant: Variants = {
 interface CardProps {
   title: string;
   imageurl: string;
+  href?: string;
 }
 
-const InfoCard: React.FC<CardProps> = ({ title, imageurl }) => {
+const InfoCard: React.FC<CardProps> = ({ title, imageurl, href }) => {
   const parts = title.split(/(-|\(|\))/).map(part => part.trim()).filter(Boolean);
 
-  return (
+  const CardContent = (
     <motion.div
       variants={popUpVariant}
       initial="hidden"
@@ -57,6 +59,16 @@ const InfoCard: React.FC<CardProps> = ({ title, imageurl }) => {
       </div>
     </motion.div>
   );
+
+  if (href) {
+    return (
+      <Link href={href}>
+        {CardContent}
+      </Link>
+    );
+  }
+
+  return CardContent;
 };
 
 export default InfoCard;

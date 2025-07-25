@@ -1,6 +1,3 @@
-import Navbar from '@/components/shared/Navbar';
-import Footer from '@/components/shared/Footer';
-
 export default function EventsLayout({
   children,
 }: {
@@ -8,9 +5,7 @@ export default function EventsLayout({
 }) {
   return (
     <div className="font-sans">
-      <Navbar />
       {children}
-      <Footer />
     </div>
   );
 }

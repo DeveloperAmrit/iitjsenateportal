@@ -40,34 +40,36 @@ const FestCard: React.FC<{ fest: Fest }> = ({ fest }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="flex flex-col bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg h-full"
+      className="group relative rounded-lg overflow-hidden shadow-lg h-full bg-gray-800 text-white"
     >
-      <div className="p-6 flex justify-between items-start">
-        <div className="pr-4">
-          <h3 className="text-2xl font-bold mb-2">{fest.title}</h3>
-          <p className={`text-sm text-gray-400 ${isExpanded ? '' : 'line-clamp-3'}`}>
-            {fest.description}
-          </p>
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="text-fulvous font-semibold mt-2"
-          >
-            {isExpanded ? 'See Less' : 'See More'}
-          </button>
+      <div
+        className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-110"
+        style={{ backgroundImage: `url(${fest.backgroundUrl})` }}
+      />
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div className="relative flex flex-col h-full p-6">
+        <div className="flex justify-between items-start">
+          <div className="pr-4">
+            <h3 className="text-2xl font-bold mb-2">{fest.title}</h3>
+            <p className={`text-sm text-gray-300 ${isExpanded ? '' : 'line-clamp-3'}`}>
+              {fest.description}
+            </p>
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-fulvous font-semibold mt-2"
+            >
+              {isExpanded ? 'See Less' : 'See More'}
+            </button>
+          </div>
+          <div className="text-right flex-shrink-0">
+            <div className="text-6xl font-extrabold text-fulvous">{day}</div>
+            <div className="text-xl font-semibold -mt-1">{month}</div>
+          </div>
         </div>
-        <div className="text-right flex-shrink-0">
-          <div className="text-6xl font-extrabold text-fulvous">{day}</div>
-          <div className="text-xl font-semibold -mt-1">{month}</div>
-        </div>
-      </div>
-      <div className="mt-auto">
-        <div className="relative h-56 w-full">
-          <img src={fest.backgroundUrl} alt={fest.title} className="w-full h-full object-cover" />
-        </div>
-        <div className="flex justify-end bg-gray-700 p-3">
+        <div className="mt-auto flex justify-end">
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="ghost" className="text-white hover:bg-gray-600 hover:text-white">More Info</Button>
+              <Button variant="ghost" className="text-white hover:bg-gray-700 hover:text-white">More Info</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px] bg-white">
               <DialogHeader>

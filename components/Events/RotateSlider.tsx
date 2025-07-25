@@ -8,7 +8,7 @@ const RotateSlider: React.FC = () => {
       {/* Full Page Background Image with Overlay */}
       <div
         className="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center z-0 filter brightness-50"
-        style={{ backgroundImage: "url('/images/fests/bg/background3.jpg')" }}
+        style={{ backgroundImage: "url('/images/fests/bg/background6.jpg')" }}
       />
 
       {/* 3D Carousel */}

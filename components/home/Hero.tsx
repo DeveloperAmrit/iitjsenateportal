@@ -7,15 +7,15 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 const images = [
-  "/iitj1.jpg",
-  "/iitj2.jpg",
-  "/iitj3.jpg",
-  "/iitj4.jpg",
-  "/iitj5.jpg",
-  "/iitj6.jpg",
-  "/iitj7.jpg",
-  "/iitj8.jpg",
-  "/iitj9.jpg",
+  "/images/IITJ/hero/iitj1.jpg",
+  "/images/IITJ/hero/iitj2.jpg",
+  "/images/IITJ/hero/iitj3.jpg",
+  "/images/IITJ/hero/iitj4.jpg",
+  "/images/IITJ/hero/iitj5.jpg",
+  "/images/IITJ/hero/iitj6.jpg",
+  "/images/IITJ/hero/iitj7.jpg",
+  "/images/IITJ/hero/iitj8.jpg",
+  "/images/IITJ/hero/iitj9.jpg",
 ];
 
 export default function Hero() {
@@ -35,7 +35,7 @@ export default function Hero() {
           <div
             key={i}
             className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${i === index ? "opacity-100" : "opacity-0"}`}
-            style={{ backgroundImage: `url(/images/IITJ/hero/${img})` }}
+            style={{ backgroundImage: `url(${img})` }}
           />
         ))}
         <div className="absolute inset-0 bg-black/50" />
@@ -48,7 +48,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="p-8 rounded-md text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-fulvous mb-6 tracking-tight">
             <Typewriter
               words={['Welcome to the IITJ Student Senate']}
               loop={0}
@@ -59,7 +59,7 @@ export default function Hero() {
               cursorStyle="."
             />
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mx-auto max-w-3xl mt-4 mb-8">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mx-auto max-w-3xl mt-4 mb-8 px-4">
             Your official portal for all student activities, councils, and events at IIT Jodhpur. We are committed to fostering a vibrant and inclusive campus community.
           </p>
           <div className="flex items-center justify-center gap-4">

@@ -63,10 +63,10 @@
 @layer utilities {
   @keyframes autoRun {
     from {
-      transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+      transform: perspective(1100px) rotateX(-16deg) rotateY(0deg);
     }
     to {
-      transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+      transform: perspective(1100px) rotateX(-16deg) rotateY(360deg);
     }
   }
 
@@ -94,49 +94,3 @@
 }
 
 
-.react-flow__node {
-  padding: 12px 20px;
-  border-radius: 8px;
-  color: white;
-  text-align: center;
-  min-width: 200px;
-  border: 1px solid;
-}
-
-.root-node {
-  background-color: #c53030;
-  border-color: #c53030;
-}
-
-.council-node {
-  background-color: #2D3748;
-  border-color: #4A5568;
-}
-
-.vp-node {
-  background-color: #4A5568;
-}
-
-.vp-node-vacant {
-  background-color: #718096;
-  font-style: italic;
-}
-
-.overall-coordinator-node {
-  background-color: #2c5282;
-}
-
-.coordinator-node {
-  background-color: #718096;
-  min-width: 150px;
-  padding: 8px 12px;
-}
-
-.react-flow__minimap {
-  background-color: #2D3748 !important;
-}
-
-.react-flow__controls button {
-  background-color: #4A5568 !important;
-  border-bottom: 1px solid #2D3748 !important;
-}

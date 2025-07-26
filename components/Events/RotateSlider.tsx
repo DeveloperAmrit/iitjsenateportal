@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 
 const RotateSlider: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const RotateSlider: React.FC = () => {
       <div
         className="absolute top-[23%] left-1/2 w-[220px] h-[280px] -translate-x-1/2 -translate-y-1/2 
                    [transform-style:preserve-3d] [transform:perspective(1200px)] animate-autoRun z-20"
-        style={{ ['--quantity' as any]: 14 }}
+        style={{ ['--quantity' as string]: 14 }}
       >
         {[...Array(14)].map((_, i) => (
           <div
@@ -23,18 +24,18 @@ const RotateSlider: React.FC = () => {
             className="absolute inset-0 p-4"
             style={{
               transform: `rotateY(${(i * 360) / 14}deg) translateZ(600px)`,
-              ['--position' as any]: i + 1,
+              ['--position' as string]: i + 1,
             }}
           >
             <div className="relative w-full h-full bg-white/10 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-500">
-              <img
+              <Image
                 src={`/images/fests/sliderImages/Image (${i + 1}).png`}
                 alt={`Event ${i + 1}`}
                 className="w-full h-full object-contain"
+                width={220} // Set appropriate width
+                height={280} // Set appropriate height
+                priority={i < 3} // Only prioritize first few images
               />
-              {/* <div className="absolute bottom-2 left-2 right-2 bg-black/50 rounded-lg p-1">
-                <p className="text-white text-xs truncate">Event {i + 1}</p>
-              </div> */}
             </div>
           </div>
         ))}

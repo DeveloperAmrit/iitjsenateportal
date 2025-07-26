@@ -64,12 +64,12 @@ export default function Hero() {
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link href="/events">
-              <Button size="lg" className="bg-fulvous text-white hover:bg-fulvous/90">
+              <Button size="lg" className="bg-fulvous text-white hover:bg-fulvous/90 cursor-pointer">
                 Explore Events
               </Button>
             </Link>
             <Link href="/senate">
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black cursor-pointer">
                 About the Senate
               </Button>
             </Link>

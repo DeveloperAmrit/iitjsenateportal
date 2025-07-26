@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
@@ -27,7 +26,8 @@ const FestCard: React.FC<{ fest: Fest }> = ({ fest }) => {
       const day = date.getDate();
       const month = date.toLocaleString('default', { month: 'short' });
       return { day, month };
-    } catch (e) {
+    } catch (error) {
+      console.error("Error parsing date:", error);
       return { day: 'TBA', month: 'TBA' };
     }
   };

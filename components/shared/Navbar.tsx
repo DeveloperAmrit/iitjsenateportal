@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/50 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
-      <div className="flex items-center justify-between px-6 py-3">
+      <div className="flex items-center justify-between px-6 py-1">
         <Link href='/' className="flex items-center gap-4 cursor-pointer">
           <Avatar className="h-14 w-14">
             <AvatarImage src="/images/IITJ/logo/iitjlogo2.webp" alt="Logo" />
@@ -53,7 +53,6 @@ const navLinks = [
   { href: "https://www.iitj.ac.in/main/en/iitj", label: "Visit IITJ" }
 ]
 
-
 function NavbarLinks() {
   return (
     <nav className="hidden md:flex gap-8 text-base font-medium text-gray-200 items-center">
@@ -61,8 +60,8 @@ function NavbarLinks() {
         <Link
           key={href}
           href={href}
-          target={label === "Calendar" || label === "Constitution" ? "_blank" : undefined}
-          rel={label === "Calendar" || label === "Constitution" ? "noopener noreferrer" : undefined}
+          target={["Calendar", "Constitution"].includes(label) ? "_blank" : undefined}
+          rel={["Calendar", "Constitution"].includes(label) ? "noopener noreferrer" : undefined}
           className="relative group"
         >
           <span className="transition-colors duration-300 group-hover:text-fulvous">{label}</span>

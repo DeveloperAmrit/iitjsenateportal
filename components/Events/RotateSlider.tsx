@@ -14,7 +14,7 @@ const RotateSlider: React.FC = () => {
 
       {/* 3D Carousel */}
       <div
-        className="absolute top-[23%] left-1/2 w-[220px] h-[280px] -translate-x-1/2 -translate-y-1/2 
+        className="absolute top-1/4 left-1/2 w-[180px] h-[240px] sm:w-[220px] sm:h-[280px] -translate-x-1/2 -translate-y-1/2 
                    [transform-style:preserve-3d] [transform:perspective(1200px)] animate-autoRun z-20"
         style={{ ['--quantity' as string]: 14 }}
       >
@@ -23,7 +23,7 @@ const RotateSlider: React.FC = () => {
             key={i}
             className="absolute inset-0 p-4"
             style={{
-              transform: `rotateY(${(i * 360) / 14}deg) translateZ(600px)`,
+              transform: `rotateY(${(i * 360) / 14}deg) translateZ(540px)`,
               ['--position' as string]: i + 1,
             }}
           >
@@ -32,9 +32,9 @@ const RotateSlider: React.FC = () => {
                 src={`/images/fests/sliderImages/Image (${i + 1}).png`}
                 alt={`Event ${i + 1}`}
                 className="w-full h-full object-contain"
-                width={220} // Set appropriate width
-                height={280} // Set appropriate height
-                priority={i < 3} // Only prioritize first few images
+                width={220} 
+                height={280}
+                priority={i < 3} 
               />
             </div>
           </div>
@@ -42,10 +42,10 @@ const RotateSlider: React.FC = () => {
       </div>
 
       {/* Foreground Content */}
-      <div className="absolute bottom-0 left-0 w-full max-w-[1400px] pb-16 px-8 flex flex-wrap items-end z-10 text-left">
-        <h1 className="font-['ICA_Rubrik'] text-[10rem] sm:text-[8rem] leading-[0.9em] text-white relative drop-shadow-xl z-10"> EVENTS </h1>
-        <div className="absolute right-[-120px] max-w-[320px] ml-8 mb-4 font-['Poppins'] text-white z-10 drop-shadow-lg">
-          <h2 className="text-[2.5rem] sm:text-[2rem] font-semibold">Events at IITJ</h2>
+      <div className="absolute bottom-0 left-0 w-full p-4 sm:p-8 flex flex-col sm:flex-row items-center sm:items-end justify-between z-10 text-center sm:text-left">
+        <h1 className="font-['ICA_Rubrik'] text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] leading-none text-white relative drop-shadow-xl">EVENTS</h1>
+        <div className="max-w-xs md:max-w-sm mt-4 sm:mt-0 sm:ml-8 text-white z-10 drop-shadow-lg">
+          <h2 className="text-xl sm:text-2xl font-semibold">Events at IITJ</h2>
           <p className="font-bold text-[1.2rem] mt-1">Culture and Tech</p>
           <p className="text-[1rem] mt-2 leading-relaxed">
             IIT Jodhpur hosts a vibrant array of events and fests spanning diverse fields, celebrating talent,

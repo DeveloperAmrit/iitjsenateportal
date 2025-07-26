@@ -28,9 +28,9 @@ const InfoCard: React.FC<CardProps> = ({ title, imageurl, href }) => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      className="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full"
+      className="bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden hover:shadow-fulvous/20 hover:border-fulvous/50 transition-all duration-300 flex flex-col h-full"
     >
-      <div className="flex-shrink-0 h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
+      <div className="flex-shrink-0 h-48 bg-gray-700 overflow-hidden flex items-center justify-center">
         <img
           src={imageurl}
           alt={title}
@@ -43,14 +43,14 @@ const InfoCard: React.FC<CardProps> = ({ title, imageurl, href }) => {
         />
       </div>
       <div className="p-6 flex-grow flex flex-col justify-center">
-        <h3 className="text-xl font-semibold text-gray-800 text-center">
+        <h3 className="text-xl font-semibold text-white text-center">
           {parts.map((part, index) => {
             if (part === '-' || part === '(' || part === ')') return null;
             const isName = parts[index - 1] === '-';
             const isAcronym = parts[index - 1] === '(';
 
             return (
-              <span key={index} className={`block ${isName || isAcronym ? 'mt-1 text-gray-600 font-medium' : ''}`}>
+              <span key={index} className={`block ${isName || isAcronym ? 'mt-1 text-gray-300 font-medium' : ''}`}>
                 {part}
               </span>
             );

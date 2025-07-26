@@ -1,6 +1,6 @@
 export const councils = [
     {
-        title: "Academic Co Curricular and Activity Council - ACAC",
+        title: "GeneralAcademic Co Curricular and Activity Council - ACAC",
         fullform: "Academic Co-Curricular and Activity Council",
         imageurl: "",
         holder: "Yash Golani",

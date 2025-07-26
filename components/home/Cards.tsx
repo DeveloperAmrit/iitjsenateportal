@@ -4,7 +4,7 @@ import { ACACBoards, SACBoards } from '@/data/boards';
 import { BCCAClubs, BLAClubs, BACClubs, BSSClubs } from '@/data/clubs';
 import CardGrid from '../shared/CardGrid';
 import InfiniteMarquee from '../shared/Marquee';
-import InfoCard from '../shared/InfoCard'; // Import the new component
+import InfoCard from '../shared/InfoCard';
 
 const mapItems = (arr: { title: string; imageurl: string }[]) =>
   arr.map(({ title, imageurl }) => ({ title, imageurl }));
@@ -21,12 +21,12 @@ const Cards: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-16 py-10 bg-gray-50">
+    <div className="flex flex-col items-center gap-16 py-10 bg-gray-900 text-white">
       <CardGrid title="Councils under the Student Body" cols={3} items={councilItems} />
       <CardGrid title="Boards under ACAC" cols={3} items={acacItems} />
 
       <section className="w-full max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-10 text-center text-gray-800">Boards under SAC</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center text-orange-500">Boards under SAC</h2>
         <div className="flex flex-wrap gap-8 justify-center">
           {sacItems.map((item, i) => (
             <div key={i} className="w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.33%-1.5rem)] lg:w-[calc(33.33%-1.5rem)]">

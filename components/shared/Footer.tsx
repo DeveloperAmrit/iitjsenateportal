@@ -276,16 +276,14 @@ const Footer: React.FC = () => {
       <div className="border-t border-gray-700 mt-10 pt-4 text-center text-xs text-gray-400">
         <div className="flex flex-col sm:flex-row justify-between items-center max-w-7xl mx-auto px-4">
           <p className="mb-2 sm:mb-0">
-            &copy; {new Date().getFullYear()} Student Senate, IIT Jodhpur. All rights reserved.
+            &copy; Student Senate {new Date().getFullYear()}, IIT Jodhpur. All rights reserved.
           </p>
           <div className="flex items-center">
             <p className="mr-4">Developed & Maintained by Student Senate | IIT Jodhpur</p>
             <button
               onClick={() => alert("Dark/Light Mode Toggle functionality goes here!")}
               className="flex items-center text-gray-400 hover:text-white transition cursor-pointer"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h1M3 12H2m8.006 10.006A4.5 4.5 0 0112 17.5a4.5 4.5 0 014.506 4.506M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-              Switch to Light Version
+            >              
             </button>
           </div>
         </div>

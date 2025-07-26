@@ -19,7 +19,7 @@ export default function Navbar() {
     <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/50 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
       <div className="flex items-center justify-between px-6 py-3">
         <Link href='/' className="flex items-center gap-4 cursor-pointer">
-          <Avatar className="h-14 w-14 border-2 border-white/50">
+          <Avatar className="h-14 w-14">
             <AvatarImage src="/images/IITJ/logo/iitjlogo2.webp" alt="Logo" />
             <AvatarFallback>IITJ</AvatarFallback>
           </Avatar>
@@ -50,7 +50,7 @@ const navLinks = [
     href: "/pdfs/constitution.pdf",
     label: "Constitution"
   },
-  { href: "/visit-iitj", label: "Visit IITJ" }
+  { href: "https://www.iitj.ac.in/main/en/iitj", label: "Visit IITJ" }
 ]
 
 

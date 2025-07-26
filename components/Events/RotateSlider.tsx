@@ -41,7 +41,7 @@ const RotateSlider: React.FC = () => {
       </div>
 
       {/* Foreground Content */}
-      <div className="absolute bottom-0 left-0 w-full max-w-[1400px] pb-16 px-8 flex flex-wrap items-end z-10 text-left">
+      <div className="absolute bottom-[-5] left-0 w-full max-w-[1400px] pb-16 px-8 flex flex-wrap items-end z-10 text-left">
         <h1 className="font-['ICA_Rubrik'] text-[10rem] sm:text-[8rem] leading-[0.9em] text-white relative drop-shadow-xl z-10"> EVENTS </h1>
         <div className="absolute right-[-120px] max-w-[320px] ml-8 mb-4 font-['Poppins'] text-white z-10 drop-shadow-lg">
           <h2 className="text-[2.5rem] sm:text-[2rem] font-semibold">Events at IITJ</h2>

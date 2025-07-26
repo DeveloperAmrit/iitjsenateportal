@@ -1,6 +1,6 @@
 export const councils = [
     {
-        title: "GeneralAcademic Co Curricular and Activity Council - ACAC",
+        title: "General Secretary - Academic Co Curricular and Activity Council - ACAC",
         fullform: "Academic Co-Curricular and Activity Council",
         imageurl: "",
         holder: "Yash Golani",
@@ -13,7 +13,7 @@ export const councils = [
         ]
     },
     {
-        title: "Student Senate - SS",
+        title: "General Secretary - Student Senate - SS",
         fullform: "Student Senate",
         imageurl: "",
         holder: "Tharakdatta Hegde",
@@ -26,7 +26,7 @@ export const councils = [
         ]
     },
     {
-        title: "Student Activity Council - SAC",
+        title: "General Secretary - Student Activity Council - SAC",
         fullform: "Student Activity Council",
         imageurl: "",
         holder: "Manas Chechani",

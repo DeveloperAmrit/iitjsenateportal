@@ -70,7 +70,7 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
       animate={controls}
       className="w-full py-8 bg-gray-900"
     >
-      <h2 className="w-full text-center text-3xl font-bold mb-8 text-white">{marqueeTitle}</h2>
+      <h2 className="w-full text-center text-3xl font-bold mb-8 text-fulvous">{marqueeTitle}</h2>
       <div className="flex flex-col gap-4">
         {rows.map((row, idx) => (
           <div
@@ -99,11 +99,11 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
               className="py-2"
               autoFill
             >
-              <div className="flex w-full justify-evenly">
+              <div className="flex w-full justify-evenly ">
                 {row.map((item, i) => (
                   <motion.div
                     key={i}
-                    className="flex items-center gap-x-4 bg-gray-800 rounded-lg shadow-md px-4 py-3 mx-4 min-w-[220px] h-[80px] border border-gray-700"
+                    className="flex items-center gap-x-4 bg-gray-700 rounded-lg shadow-md px-4 py-3 mx-4 min-w-[220px] h-[80px] border border-gray-700 hover:shadow-fulvous/20 hover:border-fulvous/50 transition-all duration-10"
                     whileHover={cardHoverVariant}
                     initial={false}
                   >

@@ -14,7 +14,7 @@ const Societies = () => {
             <div className='py-16'>
                 <div className='text-center px-4'>
                     <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight center">
-                    Councils, Boards, and Societies
+                    Student Senate of IIT Jodhpur
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-200 mx-auto max-w-3xl mt-4 mb-8">
                     Explore the diverse range of student-led organizations at IIT Jodhpur.

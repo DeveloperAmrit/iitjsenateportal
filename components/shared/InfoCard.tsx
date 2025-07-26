@@ -30,7 +30,7 @@ const InfoCard: React.FC<CardProps> = ({ title, imageurl, href }) => {
       viewport={{ once: true, amount: 0.3 }}
       className="bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden hover:shadow-fulvous/20 hover:border-fulvous/50 transition-all duration-300 flex flex-col h-full"
     >
-      <div className="flex-shrink-0 h-48 bg-gray-700 overflow-hidden flex items-center justify-center">
+      <div className="group relative flex flex-col justify-end w-full h-64 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105">
         <img
           src={imageurl}
           alt={title}

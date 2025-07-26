@@ -10,7 +10,7 @@ export default function Home() {
         <Cards />
       </div>
       <div className="bg-gray-900 py-16">
-        <h1 className="text-center text-4xl md:text-5xl font-bold text-white">
+        <h1 className="text-center text-4xl md:text-5xl font-bold text-fulvous">
           Major Fests at IIT Jodhpur
         </h1>
         <p className="text-center text-lg text-gray-300 mt-4 max-w-3xl mx-auto px-4">

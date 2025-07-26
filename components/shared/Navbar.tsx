@@ -39,9 +39,8 @@ export default function Navbar() {
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/senate", label: "Student Senate" },
+  { href: "/societies", label: "Student Senate" },
   { href: "/events", label: "Events" },
-  { href: "/societies", label: "Societies" },
   {
     href: "https://iitj.ac.in/PageImages/Gallery/07-2025/Academic-Calendar-AY-202526SemI2-with-CCCD-events-638871414539740843.pdf",
     label: "Calendar"

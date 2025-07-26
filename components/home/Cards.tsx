@@ -26,7 +26,7 @@ const Cards: React.FC = () => {
       <CardGrid title="Boards under ACAC" cols={3} items={acacItems} />
 
       <section className="w-full max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-10 text-center text-orange-500">Boards under SAC</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center text-fulvous">Boards under SAC</h2>
         <div className="flex flex-wrap gap-8 justify-center">
           {sacItems.map((item, i) => (
             <div key={i} className="w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.33%-1.5rem)] lg:w-[calc(33.33%-1.5rem)]">

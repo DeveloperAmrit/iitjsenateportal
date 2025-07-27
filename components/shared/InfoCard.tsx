@@ -1,74 +1,57 @@
 "use client"
 
-import React from 'react';
-import { motion, Variants } from 'framer-motion';
-import Link from 'next/link';
-
-const popUpVariant: Variants = {
-  hidden: { opacity: 0.2, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.5, ease: 'easeOut' },
-  },
-};
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface CardProps {
   title: string;
   imageurl: string;
-  href?: string;
 }
 
-const InfoCard: React.FC<CardProps> = ({ title, imageurl, href }) => {
+const InfoCard: React.FC<CardProps> = ({ title, imageurl}) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Fallback to IITJ logo if no imageurl is provided
+  const backgroundImageUrl = imageurl || '/images/IITJ/logo/iitjlogo.png';
+  
   const parts = title.split(/(-|\(|\))/).map(part => part.trim()).filter(Boolean);
 
-  const CardContent = (
-    <motion.div
-      variants={popUpVariant}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-      className="bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden hover:shadow-fulvous/20 hover:border-fulvous/50 transition-all duration-300 flex flex-col h-full"
-    >
-      <div className="group relative flex flex-col justify-end w-full h-64 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105">
-        <img
-          src={imageurl}
-          alt={title}
-          loading="lazy"
-          className="h-full w-full object-cover"
-          onError={(e) => {
-            e.currentTarget.onerror = null;
-            e.currentTarget.src = '/images/IITJ/logo/iitjlogo.png';
-          }}
-        />
-      </div>
-      <div className="p-6 flex-grow flex flex-col justify-center">
-        <h3 className="text-xl font-semibold text-white text-center">
-          {parts.map((part, index) => {
-            if (part === '-' || part === '(' || part === ')') return null;
-            const isName = parts[index - 1] === '-';
-            const isAcronym = parts[index - 1] === '(';
 
-            return (
-              <span key={index} className={`block ${isName || isAcronym ? 'mt-1 text-gray-300 font-medium' : ''}`}>
-                {part}
-              </span>
-            );
-          })}
-        </h3>
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="group relative rounded-lg overflow-hidden shadow-lg h-full bg-gray-800 text-white flex flex-col"
+    >
+      <div
+        className="absolute inset-0 bg-center transition-all duration-500 group-hover:scale-110"
+        style={{
+          backgroundImage: `url(${backgroundImageUrl})`,
+          backgroundSize: backgroundImageUrl.includes('iitjlogo.png') ? 'contain' : 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+      <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-colors duration-300 backdrop-blur-none" />
+      <div className="relative flex flex-col h-full p-6 pt-15 justify-center items-center text-center">
+        <div className="flex-grow">
+          <h3 className="text-2xl font-bold mb-2">
+            {parts.map((part, index) => {
+              if (part === '-' || part === '(' || part === ')') return null;
+              const isSubtext = parts[index - 1] === '-' || parts[index - 1] === '(';
+
+              return (
+                <span key={index} className={`block ${isSubtext ? 'text-lg font-medium text-gray-300' : ''}`}>
+                  {part}
+                </span>
+              );
+            })}
+          </h3>
+        </div>
       </div>
     </motion.div>
   );
-
-  if (href) {
-    return (
-      <Link href={href}>
-        {CardContent}
-      </Link>
-    );
-  }
-
-  return CardContent;
 };
 
 export default InfoCard;

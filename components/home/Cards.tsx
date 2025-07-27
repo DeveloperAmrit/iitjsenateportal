@@ -1,23 +1,44 @@
 import React from 'react';
 import { councils } from '@/data/councils';
 import { ACACBoards, SACBoards } from '@/data/boards';
-import { BCCAClubs, BLAClubs, BACClubs, BSSClubs } from '@/data/clubs';
+import { BCCAClubs, BLAClubs, BACClubs, BSSClubs, BCDClubs, BAIClubs, SAAClubs, BIECLubs, SenateCommitties } from '@/data/clubs';
 import CardGrid from '../shared/CardGrid';
 import InfiniteMarquee from '../shared/Marquee';
 import InfoCard from '../shared/InfoCard';
 
-const mapItems = (arr: { title: string; imageurl: string }[]) =>
+type ItemWithAbout = {
+  title: string;
+  imageurl: string;
+};
+
+type Item = {
+  title: string;
+  imageurl: string;
+};
+
+
+const mapItemsForCards = (arr: ItemWithAbout[]) =>
+  arr.map(({ title, imageurl}) => ({ title, imageurl}));
+  
+const mapItemsForMarquee = (arr: Item[]) =>
   arr.map(({ title, imageurl }) => ({ title, imageurl }));
 
 const Cards: React.FC = () => {
-  const councilItems = mapItems(councils);
-  const acacItems = mapItems(ACACBoards);
-  const sacItems = mapItems(SACBoards);
-  const acacClubs = mapItems(BCCAClubs);
+  const councilItems = mapItemsForCards(councils);
+  const acacItems = mapItemsForCards(ACACBoards);
+  const sacItems = mapItemsForCards(SACBoards);
+  const acacClubs = [
+    ...mapItemsForMarquee(BCCAClubs),
+    ...mapItemsForMarquee(BAIClubs),
+    ...mapItemsForMarquee(SAAClubs),
+    ...mapItemsForMarquee(BIECLubs),
+    ...mapItemsForMarquee(BCDClubs),
+    ...mapItemsForMarquee(SenateCommitties)
+  ];
   const sacClubs = [
-    ...mapItems(BLAClubs),
-    ...mapItems(BACClubs),
-    ...mapItems(BSSClubs),
+    ...mapItemsForMarquee(BLAClubs),
+    ...mapItemsForMarquee(BACClubs),
+    ...mapItemsForMarquee(BSSClubs),
   ];
 
   return (
@@ -27,11 +48,9 @@ const Cards: React.FC = () => {
 
       <section className="w-full max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-10 text-center text-fulvous">Boards under SAC</h2>
-        <div className="flex flex-wrap gap-8 justify-center">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {sacItems.map((item, i) => (
-            <div key={i} className="w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.33%-1.5rem)] lg:w-[calc(33.33%-1.5rem)]">
-              <InfoCard title={item.title} imageurl={item.imageurl} />
-            </div>
+            <InfoCard key={i} title={item.title} imageurl={item.imageurl}/>
           ))}
         </div>
       </section>
@@ -40,7 +59,7 @@ const Cards: React.FC = () => {
         data={acacClubs}
         marqueeTitle="Societies under ACAC"
         minItemsPerRow={3}
-        maxItemsPerRow={6}
+        maxItemsPerRow={5}
       />
       <InfiniteMarquee
         data={sacClubs}

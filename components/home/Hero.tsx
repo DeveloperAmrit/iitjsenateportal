@@ -68,7 +68,7 @@ export default function Hero() {
                 Explore Events
               </Button>
             </Link>
-            <Link href="/senate">
+            <Link href="/societies">
               <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black cursor-pointer">
                 About the Senate
               </Button>

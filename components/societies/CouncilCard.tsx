@@ -1,77 +1,98 @@
-"use client";
+"use client"
 
-import React from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 
-type CouncilCardProps = {
+interface Council {
   title: string;
+  fullform: string;
+  imageurl: string;
+  holder: string;
   about: string;
-  holderName: string;
   contactInfo: string;
-  logoUrl: string;
   socialLinks: { label: string; href: string }[];
-};
+}
 
-const CouncilCard: React.FC<CouncilCardProps> = ({
-  title,
-  about,
-  holderName,
-  contactInfo,
-  logoUrl,
-  socialLinks,
-}) => {
+const CouncilCard: React.FC<{ council: Council }> = ({ council }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const getAcronym = (title: string) => {
+    const parts = title.split('-').map(part => part.trim());
+    return parts[parts.length - 1] || 'N/A';
+  };
+
+  const acronym = getAcronym(council.title);
+
+  const linkedInUrl = council.socialLinks.find(link => link.label.toLowerCase() === 'linkedin')?.href;
+  const instagramUrl = council.socialLinks.find(link => link.label.toLowerCase() === 'instagram')?.href;
+  const facebookUrl = council.socialLinks.find(link => link.label.toLowerCase() === 'facebook')?.href;
+
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="bg-gray-800/50 border border-gray-700 rounded-2xl p-6 flex flex-col md:flex-row gap-6 shadow-lg hover:shadow-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300"
+      className="group relative rounded-lg overflow-hidden shadow-lg h-full md:w-[1000px] bg-gray-800 text-white"
     >
-      <div className="flex-1 flex flex-col gap-5">
-        <h3 className="font-semibold text-2xl mb-2 text-white">{title}</h3>
-        <div className="bg-gray-900/70 border border-gray-700 rounded-lg p-4 shadow-sm text-gray-300">
-          {about}
+      <div
+        className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-110"
+        style={{ backgroundImage: `url('/images/fests/bg/background7.jpg')` }}
+      />
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      
+      <div className="relative flex flex-col h-full p-5">
+        <div className="flex justify-between items-start">
+          <div className="pr-4 flex-grow">
+            <div className="flex items-center mb-4">
+              
+              <div className="ml-4">
+                <h4 className="text-lg font-bold text-white">General Secretary</h4>
+                <p className="text-sm text-gray-300">{council.fullform}</p>
+              </div>
+            </div>
+            
+            <p className={`text-sm text-gray-300 ${isExpanded ? '' : 'line-clamp-3'}`}>
+              {council.about}
+            </p>
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-fulvous font-semibold mt-2 text-sm"
+            >
+              {isExpanded ? 'See Less' : 'See More'}
+            </button>
+          </div>
+
+          <div className="text-right flex-shrink-0 flex flex-col items-end">
+            <div className="text-3xl font-extrabold text-fulvous mb-2">{council.holder}</div>
+            <Avatar className="h-35 w-30 border-1 border-fulvous/80 flex items-center flex items-center mx-auto">
+              <AvatarImage src={council.imageurl || '/images/IITJ/logo/iitjlogo.png'} alt={council.holder} />
+              <AvatarFallback>{council.holder.substring(0, 2)}</AvatarFallback>
+            </Avatar>
+          </div>
         </div>
-        <div className="bg-gray-900/70 border border-gray-700 rounded-lg p-4 shadow-sm flex items-center gap-2">
-          <span className="font-medium text-white">{holderName}</span>
-          <span className="ml-2 text-gray-400">{contactInfo}</span>
-        </div>
-      </div>
-      <div className="flex flex-col items-center gap-5 min-w-[200px]">
-        <div className="bg-gray-900/70 border border-gray-700 rounded-xl flex flex-col items-center justify-center p-6 shadow">
-          <div className="w-28 h-28 rounded-full flex items-center justify-center mb-2 shadow bg-gray-800">
-            {logoUrl ? (
-              <Image
-                src={logoUrl}
-                alt="Council Logo"
-                width={90}
-                height={90}
-                className="rounded-full object-cover"
-              />
-            ) : (
-              <span className="text-gray-400 text-center">Logo</span>
+        
+        {/* Footer: Social Icons */}
+        <div className="mt-auto flex justify-end items-center gap-4 pt-4">
+            {instagramUrl && (
+                <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-transform duration-200 hover:scale-110">
+                    <FaInstagram size={24} />
+                </a>
             )}
-          </div>
-        </div>
-        <div className="bg-gray-900/70 border border-gray-700 rounded-xl p-4 w-full text-center shadow">
-          <span className="font-semibold text-gray-300 mb-2 block">
-            Social Links
-          </span>
-          <div className="grid grid-cols-2 gap-3 justify-center mt-2">
-            {socialLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-4 py-2 rounded-full bg-cyan-600/80 text-white font-medium shadow hover:scale-105 hover:bg-cyan-500/80 transition-all duration-200"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+            {linkedInUrl && (
+                <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-transform duration-200 hover:scale-110">
+                    <FaLinkedin size={24} />
+                </a>
+            )}
+             {facebookUrl && (
+                <a href={facebookUrl} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-transform duration-200 hover:scale-110">
+                    <FaFacebook size={24} />
+                </a>
+            )}
         </div>
       </div>
     </motion.div>

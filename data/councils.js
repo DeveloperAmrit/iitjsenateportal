@@ -8,7 +8,6 @@ export const councils = [
         contactInfo: "email phone",
         socialLinks: [
             {label: "Instagram", href: "https://www.instagram.com/iitj_acac/"},
-            {label: "Facebook", href: "https://www.facebook.com/iitj.acac/"},
             {label: "LinkedIn", href: "https://www.linkedin.com/company/iitj-acac/"}
         ]
     },
@@ -21,7 +20,6 @@ export const councils = [
         contactInfo: "email phone",
         socialLinks: [
             {label: "Instagram", href: "https://www.instagram.com/iitj_acac/"},
-            {label: "Facebook", href: "https://www.facebook.com/iitj.acac/"},
             {label: "LinkedIn", href: "https://www.linkedin.com/company/iitj-acac/"}
         ]
     },
@@ -34,7 +32,6 @@ export const councils = [
         contactInfo: "email phone",
         socialLinks: [
             {label: "Instagram", href: "https://www.instagram.com/iitj_acac/"},
-            {label: "Facebook", href: "https://www.facebook.com/iitj.acac/"},
             {label: "LinkedIn", href: "https://www.linkedin.com/company/iitj-acac/"}
         ]
     },

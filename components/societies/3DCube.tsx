@@ -40,18 +40,18 @@ const Cube: React.FC<CubeProps> = ({ faces }) => {
   };
 
   return (
-    <div className="w-full flex items-center justify-center py-16 bg-gradient-to-br from-gray-50 to-white">
-      <div className="flex flex-col lg:flex-row items-center gap-12 max-w-7xl mx-auto px-8">
+    <div className="w-full flex items-center justify-center py-16">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-24 max-w-7xl mx-auto px-8">
         
         {/* Control Panel */}
-        <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 p-8 min-w-[300px]">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-[#060616] mb-2">Board Navigator</h3>
-            <div className="w-16 h-1 bg-gradient-to-r from-[#E58420] to-[#323273] rounded-full mx-auto"></div>
+        <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 p-6 w-[320px] flex-shrink-0 lg:sticky lg:top-8">
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-bold text-[#060616] mb-2">Board Navigator</h3>
+            <div className="w-12 h-1 bg-gradient-to-r from-[#E58420] to-[#323273] rounded-full mx-auto"></div>
           </div>
           
-          <div className="space-y-4">
-            <div className="text-sm font-semibold text-[#323273] uppercase tracking-wider mb-4 text-center">
+          <div className="space-y-3">
+            <div className="text-xs font-semibold text-[#323273] uppercase tracking-wider mb-3 text-center">
               Select a Board
             </div>
             {faceConfigs.map((item, idx) => (
@@ -59,24 +59,24 @@ const Cube: React.FC<CubeProps> = ({ faces }) => {
                 <button
                   key={idx}
                   onClick={() => rotateTo(item.rot.x, item.rot.y, item.idx)}
-                  className={`w-full px-6 py-4 rounded-xl font-semibold text-left transition-all duration-300 border-2 group relative overflow-hidden ${
+                  className={`w-full px-4 py-3 rounded-lg font-semibold text-left transition-all duration-300 border-2 group relative overflow-hidden ${
                     activeFace === item.idx 
                       ? "bg-gradient-to-r from-[#E58420] to-[#323273] text-white border-transparent shadow-lg transform scale-105" 
                       : "bg-white text-[#060616] border-gray-200 hover:border-[#E58420] hover:shadow-md hover:scale-102"
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <div>
-                      <div className="font-bold text-sm mb-1">
-                        {faces[item.idx].boardTitle}
+                    <div className="flex-1 min-w-0 pr-2">
+                      <div className="font-bold text-xs mb-1 truncate">
+                        {faces[item.idx].boardTitle.replace(/^Board of /, '')}
                       </div>
                       <div className={`text-xs opacity-75 ${
                         activeFace === item.idx ? "text-white/80" : "text-[#323273]"
                       }`}>
-                        {item.label} Face
+                        {item.label}
                       </div>
                     </div>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 ${
+                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 flex-shrink-0 ${
                       activeFace === item.idx 
                         ? "bg-white/20 text-white" 
                         : "bg-[#E58420]/10 text-[#E58420] group-hover:bg-[#E58420]/20"
@@ -87,7 +87,7 @@ const Cube: React.FC<CubeProps> = ({ faces }) => {
                   
                   {/* Hover effect overlay */}
                   {activeFace !== item.idx && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#E58420]/5 to-[#323273]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#E58420]/5 to-[#323273]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
                   )}
                 </button>
               )
@@ -95,18 +95,18 @@ const Cube: React.FC<CubeProps> = ({ faces }) => {
           </div>
           
           {/* Current board info */}
-          <div className="mt-8 p-4 bg-gradient-to-br from-[#E58420]/5 to-[#323273]/5 rounded-xl border border-[#E58420]/20">
-            <div className="text-xs font-semibold text-[#323273] uppercase tracking-wider mb-2">
+          <div className="mt-6 p-3 bg-gradient-to-br from-[#E58420]/5 to-[#323273]/5 rounded-lg border border-[#E58420]/20">
+            <div className="text-xs font-semibold text-[#323273] uppercase tracking-wider mb-1">
               Currently Viewing
             </div>
-            <div className="font-bold text-[#060616]">
+            <div className="font-bold text-sm text-[#060616] truncate">
               {faces[activeFace].boardTitle}
             </div>
           </div>
         </div>
 
         {/* 3D Cube */}
-        <div className="flex-1 flex items-center justify-center">
+        <div className="flex-1 flex items-center justify-center min-h-[600px] lg:pl-8">
           <div className="relative">
             {/* Cube container with enhanced styling */}
             <div className="cube-container relative">
@@ -141,17 +141,6 @@ const Cube: React.FC<CubeProps> = ({ faces }) => {
             
             {/* Subtle shadow beneath cube */}
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-64 h-8 bg-black/10 rounded-full blur-lg opacity-60"></div>
-          </div>
-        </div>
-        
-      </div>
-      
-      {/* Instructions */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg border border-gray-200">
-          <div className="flex items-center gap-2 text-sm text-[#323273]">
-            <div className="w-2 h-2 bg-[#E58420] rounded-full animate-pulse"></div>
-            <span className="font-medium">Click board names to rotate the cube</span>
           </div>
         </div>
       </div>

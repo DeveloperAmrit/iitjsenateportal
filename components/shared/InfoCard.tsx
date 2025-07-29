@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const popUpVariant: Variants = {
   hidden: { opacity: 0.2, scale: 0.95 },
@@ -30,15 +31,15 @@ const InfoCard: React.FC<CardProps> = ({ title, imageurl, href }) => {
       viewport={{ once: true, amount: 0.3 }}
       className="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full"
     >
-      <div className="flex-shrink-0 h-48 bg-gray-100 overflow-hidden flex items-center justify-center">
-        <img
+      <div className="flex-shrink-0 h-48 bg-gray-100 overflow-hidden flex items-center justify-center relative">
+        <Image
           src={imageurl}
           alt={title}
-          loading="lazy"
-          className="h-full w-full object-cover"
+          fill
+          className="object-cover"
           onError={(e) => {
-            e.currentTarget.onerror = null;
-            e.currentTarget.src = '/images/IITJ/logo/iitjlogo.png';
+            const target = e.target as HTMLImageElement;
+            target.src = '/images/IITJ/logo/iitjlogo.png';
           }}
         />
       </div>

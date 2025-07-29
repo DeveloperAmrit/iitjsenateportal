@@ -19,11 +19,11 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-gray-800/85 backdrop-blur-md shadow-md" // lighter grey
+          ? "bg-gray-800/85 backdrop-blur-sm shadow-sm"
           : "bg-transparent"
       }`}
     >
-      <div className="flex items-center justify-between px-6 py-4">
+      <div className="flex items-center justify-between px-6 py-2">
         {/* Left: Logo + Text */}
         <Link href="/" className="flex items-center gap-4 cursor-pointer">
           <Avatar className="h-16 w-16">

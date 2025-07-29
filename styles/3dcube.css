@@ -1,0 +1,65 @@
+.cube-container {
+  width: 480px;
+  height: 480px;
+  perspective: 1000px;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(0.4,0.2,0.2,1);
+}
+
+.face {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  background: rgba(20, 20, 25, 0.55); /* Black tinted glass */
+  color: #fff;
+  border: 1.5px solid rgba(80, 200, 255, 0.18);
+  border-radius: 18px;
+  box-shadow:
+    0 4px 32px 0 rgba(0,0,0,0.25),
+    0 0 0 1px rgba(80,200,255,0.08) inset;
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  overflow: hidden;
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(240px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(240px) rotateZ(180deg);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(240px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(240px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(240px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(240px);
+}
+
+
+/* Optional: subtle glass shine overlay */
+.face::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+  z-index: 1;
+}

@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 
 export default function Navbar() {
+main_2.0
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -27,15 +28,36 @@ export default function Navbar() {
         {/* Left: Logo + Text */}
         <Link href="/" className="flex items-center gap-4 cursor-pointer">
           <Avatar className="h-16 w-16">
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/50 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
+      <div className="flex items-center justify-between px-6 py-1">
+        <Link href='/' className="flex items-center gap-4 cursor-pointer">
+          <Avatar className="h-14 w-14">
+ main
             <AvatarImage src="/images/IITJ/logo/iitjlogo2.webp" alt="Logo" />
-            <AvatarFallback />
+            <AvatarFallback>IITJ</AvatarFallback>
           </Avatar>
           <div className="leading-tight">
+ main_2.0
             <h1
               className={`text-lg font-semibold ${
                 isScrolled ? "text-gray-100" : "text-gray-200"
               }`}
             >
+
+            <h1 className="text-lg font-bold text-white">
+ main
               Student Senate
             </h1>
             <p
@@ -48,10 +70,14 @@ export default function Navbar() {
           </div>
         </Link>
 
+ main_2.0
         {/* Right: Navigation Links */}
         <div className="flex items-center gap-6">
           <NavbarLinks isScrolled={isScrolled} />
         </div>
+
+        <NavbarLinks/>
+ main
       </div>
     </header>
   )
@@ -60,7 +86,6 @@ export default function Navbar() {
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/senate", label: "Student Senate" },
-  { href: "/visit-iitj", label: "Visit IITJ" },
   { href: "/events", label: "Events" },
   { href: "/societies", label: "Societies" },
   {
@@ -70,16 +95,25 @@ const navLinks = [
   {
     href: "/pdfs/constitution.pdf",
     label: "Constitution"
+ main_2.0
   }
+
+  },
+  { href: "/visit-iitj", label: "Visit IITJ" }
+ main
 ]
 
 function NavbarLinks({ isScrolled }: { isScrolled: boolean }) {
   return (
+main_2.0
     <nav
       className={`hidden md:flex gap-6 text-sm font-medium ${
         isScrolled ? "text-gray-100" : "text-gray-200"
       }`}
     >
+
+    <nav className="hidden md:flex gap-8 text-base font-medium text-gray-200 items-center">
+main
       {navLinks.map(({ href, label }) => (
         <Link
           key={href}
@@ -88,12 +122,17 @@ function NavbarLinks({ isScrolled }: { isScrolled: boolean }) {
           rel={["Calendar", "Constitution"].includes(label) ? "noopener noreferrer" : undefined}
           className="relative group"
         >
+main_2.0
           <span className="transition-colors duration-200">{label}</span>
           <span
             className={`absolute left-0 -bottom-1 h-0.5 w-0 transition-all duration-300 group-hover:w-full ${
               isScrolled ? "bg-gray-100" : "bg-white"
             }`}
           />
+
+          <span className="transition-colors duration-300 group-hover:text-fulvous">{label}</span>
+          <span className="absolute left-0 -bottom-1 h-0.5 w-0 transition-all duration-300 group-hover:w-full bg-fulvous" />
+ main
         </Link>
       ))}
     </nav>

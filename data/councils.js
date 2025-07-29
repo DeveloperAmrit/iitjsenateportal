@@ -1,20 +1,41 @@
 export const councils = [
     {
-        title: "Acadmic Co-Curricular and Activity Council",
-        fullform: "Council of Academic Affairs and Curriculum",
-        imageurl: "/images/IITJ/logo/iitjlogo.png",
-        holder: "Yash Golani"
+        title: "Academic Co-Curricular and Activity Council - ACAC",
+        fullform: "Academic Co-Curricular and Activity Council",
+        imageurl: "",
+        holder: "Yash Golani",
+        about: "The Academic Co-Curricular and Activity Council (ACAC) is responsible for overseeing and promoting academic and co-curricular activities at IIT Jodhpur. It aims to enhance the overall educational experience of students through various initiatives and programs.The Academic Co-Curricular and Activity Council (ACAC) is responsible for overseeing and promoting academic and co-curricular activities at IIT Jodhpur. It aims to enhance the overall educational experience of students through various initiatives and programs.",
+        contactInfo: "email phone",
+        socialLinks: [
+            {label: "Instagram", href: "https://www.instagram.com/iitj_acac/"},
+            {label: "Facebook", href: "https://www.facebook.com/iitj.acac/"},
+            {label: "LinkedIn", href: "https://www.linkedin.com/company/iitj-acac/"}
+        ]
     },
     {
-        title: "Student Senate",
+        title: "Student Senate - SS",
         fullform: "Student Senate",
-        imageurl: "/images/councils/ss.png",
-        holder: "Tharakdatta Hegde"
+        imageurl: "",
+        holder: "Tharakdatta Hegde",
+        about: "The Student Senate is the apex body representing the student community at IIT Jodhpur. It plays a crucial role in addressing student concerns, promoting welfare, and facilitating communication between students and the administration. The Senate organizes various events, initiatives, and discussions to enhance the overall student experience.",
+        contactInfo: "email phone",
+        socialLinks: [
+            {label: "Instagram", href: "https://www.instagram.com/iitj_acac/"},
+            {label: "Facebook", href: "https://www.facebook.com/iitj.acac/"},
+            {label: "LinkedIn", href: "https://www.linkedin.com/company/iitj-acac/"}
+        ]
     },
     {
-        title: "Student Activity Council",
+        title: "Student Activity Council - SAC",
         fullform: "Student Activity Council",
-        imageurl: "/images/councils/acac.png",
-        holder: "Manas Chechani"
+        imageurl: "",
+        holder: "Manas Chechani",
+        about: "The Student Activity Council (SAC) is responsible for organizing and promoting extracurricular activities, events, and cultural programs at IIT Jodhpur. It aims to foster a vibrant campus life by encouraging student participation in various activities beyond academics.",
+        contactInfo: "email phone",
+        socialLinks: [
+            {label: "Instagram", href: "https://www.instagram.com/iitj_acac/"},
+            {label: "Facebook", href: "https://www.facebook.com/iitj.acac/"},
+            {label: "LinkedIn", href: "https://www.linkedin.com/company/iitj-acac/"}
+        ]
     },
 ]

@@ -5,7 +5,7 @@ import { fests } from '@/data/fests'
 const Fests = () => {
   return (
     <div className='flex flex-col gap-y-24 bg-gray-900'> {/* Added flexbox and gap */}
-      {fests.map((fest, index) => (
+      {fests.slice(0,5).map((fest, index) => (
         <FullScreenCard
           key={index}
           backgroundUrl={fest.backgroundUrl}

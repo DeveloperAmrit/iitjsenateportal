@@ -19,7 +19,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-gray-800/85 backdrop-blur-sm shadow-sm"
+          ? "bg-gray-700/60 backdrop-blur-sm shadow-sm" // lighter grey blur on scroll
           : "bg-transparent"
       }`}
     >
@@ -59,7 +59,7 @@ export default function Navbar() {
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/senate", label: "Senate" },
+  { href: "/senate", label: "Student Senate" },
   { href: "/visit-iitj", label: "Visit IITJ" },
   { href: "/events", label: "Events" },
   { href: "/societies", label: "Societies" },
@@ -99,4 +99,3 @@ function NavbarLinks({ isScrolled }: { isScrolled: boolean }) {
     </nav>
   )
 }
-

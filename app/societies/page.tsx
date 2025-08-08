@@ -160,14 +160,7 @@ const Societies = () => {
                         <div className="flex flex-col gap-8">
                             {councils.map((council, index) => (
                                 <div key={index} className="transform hover:scale-[1.02] transition-transform duration-300">
-                                    <CouncilCard
-                                        title={council.title}
-                                        about={council.about || 'About this council'}
-                                        holderName={council.holder}
-                                        contactInfo={council.contactInfo || "Contact information not available"}
-                                        logoUrl={council.imageurl || '/images/IITJ/logo/iitjlogo.png'}
-                                        socialLinks={council.socialLinks || []}
-                                    />
+                                    <CouncilCard council={council} />
                                 </div>
                             ))}
                         </div>

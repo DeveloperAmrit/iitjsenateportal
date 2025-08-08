@@ -28,7 +28,6 @@ const SectionTitle = ({ children }: { children: React.ReactNode }) => (
 const Societies = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const navRef = useRef<HTMLDivElement>(null);
-    
     const ACAC_faces = getCubeFaces(ACACBoards);
     const SAC_faces = getCubeFaces(SACBoards);
 
@@ -370,4 +369,4 @@ const Societies = () => {
     )
 }
 
-export default Societies
+export default Societies;

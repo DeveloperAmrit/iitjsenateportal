@@ -1,6 +1,6 @@
 export const councils = [
     {
-        title: "Academic Co-Curricular and Activity Council - ACAC",
+        title: "General Secretary - Academic Co Curricular and Activity Council - ACAC",
         fullform: "Academic Co-Curricular and Activity Council",
         imageurl: "",
         holder: "Yash Golani",
@@ -8,12 +8,11 @@ export const councils = [
         contactInfo: "email phone",
         socialLinks: [
             {label: "Instagram", href: "https://www.instagram.com/iitj_acac/"},
-            {label: "Facebook", href: "https://www.facebook.com/iitj.acac/"},
             {label: "LinkedIn", href: "https://www.linkedin.com/company/iitj-acac/"}
         ]
     },
     {
-        title: "Student Senate - SS",
+        title: "General Secretary - Student Senate - SS",
         fullform: "Student Senate",
         imageurl: "",
         holder: "Tharakdatta Hegde",
@@ -21,12 +20,11 @@ export const councils = [
         contactInfo: "email phone",
         socialLinks: [
             {label: "Instagram", href: "https://www.instagram.com/iitj_acac/"},
-            {label: "Facebook", href: "https://www.facebook.com/iitj.acac/"},
             {label: "LinkedIn", href: "https://www.linkedin.com/company/iitj-acac/"}
         ]
     },
     {
-        title: "Student Activity Council - SAC",
+        title: "General Secretary - Student Activity Council - SAC",
         fullform: "Student Activity Council",
         imageurl: "",
         holder: "Manas Chechani",
@@ -34,7 +32,6 @@ export const councils = [
         contactInfo: "email phone",
         socialLinks: [
             {label: "Instagram", href: "https://www.instagram.com/iitj_acac/"},
-            {label: "Facebook", href: "https://www.facebook.com/iitj.acac/"},
             {label: "LinkedIn", href: "https://www.linkedin.com/company/iitj-acac/"}
         ]
     },

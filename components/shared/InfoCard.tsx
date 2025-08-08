@@ -17,19 +17,24 @@ const popUpVariant: Variants = {
 interface CardProps {
   title: string;
   imageurl: string;
-  href?: string;
 }
 
-const InfoCard: React.FC<CardProps> = ({ title, imageurl, href }) => {
+const InfoCard: React.FC<CardProps> = ({ title, imageurl}) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Fallback to IITJ logo if no imageurl is provided
+  const backgroundImageUrl = imageurl || '/images/IITJ/logo/iitjlogo.png';
+  
   const parts = title.split(/(-|\(|\))/).map(part => part.trim()).filter(Boolean);
 
-  const CardContent = (
+
+  return (
     <motion.div
-      variants={popUpVariant}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-      className="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="group relative rounded-lg overflow-hidden shadow-lg h-full bg-gray-800 text-white flex flex-col"
     >
       <div className="flex-shrink-0 h-48 bg-gray-100 overflow-hidden flex items-center justify-center relative">
         <Image
@@ -60,16 +65,6 @@ const InfoCard: React.FC<CardProps> = ({ title, imageurl, href }) => {
       </div>
     </motion.div>
   );
-
-  if (href) {
-    return (
-      <Link href={href}>
-        {CardContent}
-      </Link>
-    );
-  }
-
-  return CardContent;
 };
 
 export default InfoCard;

@@ -57,7 +57,6 @@ export const BCCAClubs = [
     }
 ];
 
-
 export const BLAClubs = [
     {
         title: "Quiz Society",
@@ -151,7 +150,6 @@ export const BACClubs = [
         socialLinks: []
     }
 ];
-
 
 export const BSSClubs = [
     {

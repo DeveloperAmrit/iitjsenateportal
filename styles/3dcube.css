@@ -52,9 +52,6 @@
   transform: rotateX(-90deg) translateZ(240px);
 }
 
-.back-content {
-  transform: rotateZ(180deg);
-}
 
 /* Optional: subtle glass shine overlay */
 .face::before {

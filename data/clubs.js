@@ -49,7 +49,7 @@ export const BCCAClubs = [
     },
     {
         title: "INSIDE",
-        description: "Game devlopment society",
+        description: "Game development society",
         imageurl: "/images/clubs/bcca/inside.png",
         holder: "",
         contactInfo: "inside@iitj.ac.in",
@@ -265,3 +265,84 @@ export const BSSClubs = [
         socialLinks: []
     }
 ];
+
+// Missing data arrays that were referenced in Cards.tsx
+export const BCDClubs = [
+    {
+        title: "BCD Cultural Club",
+        description: "Board of Cultural Development club promoting arts and cultural activities.",
+        imageurl: "/images/clubs/bcd/bcd-cultural.png",
+        holder: "",
+        contactInfo: "bcd@iitj.ac.in",
+        socialLinks: []
+    }
+];
+
+export const BAIClubs = [
+    {
+        title: "BAI Academic Club",
+        description: "Board of Academic Infrastructure club supporting academic initiatives.",
+        imageurl: "/images/clubs/bai/bai-academic.png",
+        holder: "",
+        contactInfo: "bai@iitj.ac.in",
+        socialLinks: []
+    }
+];
+
+export const SAAClubs = [
+    {
+        title: "SAA Student Club",
+        description: "Student Academic Affairs club focusing on academic support and initiatives.",
+        imageurl: "/images/clubs/saa/saa-student.png",
+        holder: "",
+        contactInfo: "saa@iitj.ac.in",
+        socialLinks: []
+    }
+];
+
+export const BIECLubs = [
+    {
+        title: "BIEC Innovation Club",
+        description: "Board of Innovation and Entrepreneurship club promoting startup culture.",
+        imageurl: "/images/clubs/biec/biec-innovation.png",
+        holder: "",
+        contactInfo: "biec@iitj.ac.in",
+        socialLinks: []
+    }
+];
+
+export const SenateCommitties = [
+    {
+        title: "Senate Academic Committee",
+        description: "Committee overseeing academic policies and student academic welfare.",
+        imageurl: "/images/committees/senate-academic.png",
+        holder: "",
+        contactInfo: "senate.academic@iitj.ac.in",
+        socialLinks: []
+    },
+    {
+        title: "Senate Cultural Committee",
+        description: "Committee managing cultural events and activities across the institute.",
+        imageurl: "/images/committees/senate-cultural.png",
+        holder: "",
+        contactInfo: "senate.cultural@iitj.ac.in",
+        socialLinks: []
+    },
+    {
+        title: "Senate Sports Committee",
+        description: "Committee overseeing sports activities and infrastructure development.",
+        imageurl: "/images/committees/senate-sports.png",
+        holder: "",
+        contactInfo: "senate.sports@iitj.ac.in",
+        socialLinks: []
+    },
+    {
+        title: "Senate Welfare Committee",
+        description: "Committee focusing on student welfare and hostel-related matters.",
+        imageurl: "/images/committees/senate-welfare.png",
+        holder: "",
+        contactInfo: "senate.welfare@iitj.ac.in",
+        socialLinks: []
+    }
+];
+

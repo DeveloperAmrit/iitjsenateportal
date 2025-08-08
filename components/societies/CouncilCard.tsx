@@ -1,9 +1,7 @@
 "use client"
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 import Image from 'next/image';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 interface Council {
@@ -17,14 +15,13 @@ interface Council {
 }
 
 const CouncilCard: React.FC<{ council: Council }> = ({ council }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
 
-  const getAcronym = (title: string) => {
-    const parts = title.split('-').map(part => part.trim());
-    return parts[parts.length - 1] || 'N/A';
-  };
-
-  const acronym = getAcronym(council.title);
+  const title = council.title;
+  const logoUrl = council.imageurl;
+  const holderName = council.holder;
+  const about = council.about;
+  const contactInfo = council.contactInfo;
+  const socialLinks = council.socialLinks || [];
 
   const linkedInUrl = council.socialLinks.find(link => link.label.toLowerCase() === 'linkedin')?.href;
   const instagramUrl = council.socialLinks.find(link => link.label.toLowerCase() === 'instagram')?.href;
@@ -131,24 +128,39 @@ const CouncilCard: React.FC<{ council: Council }> = ({ council }) => {
         
         {/* Footer: Social Icons */}
         <div className="mt-auto flex justify-end items-center gap-4 pt-4">
-            {instagramUrl && (
-                <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-transform duration-200 hover:scale-110">
-                    <FaInstagram size={24} />
-                </a>
-            )}
-            {linkedInUrl && (
-                <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-transform duration-200 hover:scale-110">
-                    <FaLinkedin size={24} />
-                </a>
-            )}
-             {facebookUrl && (
-                <a href={facebookUrl} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-transform duration-200 hover:scale-110">
-                    <FaFacebook size={24} />
-                </a>
-            )}
+          {instagramUrl && (
+            <a 
+              href={instagramUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[#323273] hover:text-[#E58420] transition-all duration-200 hover:scale-110"
+            >
+              <FaInstagram size={24} />
+            </a>
+          )}
+          {linkedInUrl && (
+            <a 
+              href={linkedInUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[#323273] hover:text-[#E58420] transition-all duration-200 hover:scale-110"
+            >
+              <FaLinkedin size={24} />
+            </a>
+          )}
+          {facebookUrl && (
+            <a 
+              href={facebookUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[#323273] hover:text-[#E58420] transition-all duration-200 hover:scale-110"
+            >
+              <FaFacebook size={24} />
+            </a>
+          )}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

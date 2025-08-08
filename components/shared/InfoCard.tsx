@@ -1,18 +1,9 @@
 "use client"
 
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const popUpVariant: Variants = {
-  hidden: { opacity: 0.2, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.5, ease: 'easeOut' },
-  },
-};
 
 interface CardProps {
   title: string;
@@ -20,10 +11,6 @@ interface CardProps {
 }
 
 const InfoCard: React.FC<CardProps> = ({ title, imageurl}) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  // Fallback to IITJ logo if no imageurl is provided
-  const backgroundImageUrl = imageurl || '/images/IITJ/logo/iitjlogo.png';
   
   const parts = title.split(/(-|\(|\))/).map(part => part.trim()).filter(Boolean);
 

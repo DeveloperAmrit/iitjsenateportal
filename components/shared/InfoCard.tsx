@@ -1,19 +1,17 @@
-"use client"
+"use client";
 
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
 
 interface CardProps {
   title: string;
   imageurl: string;
 }
 
-const InfoCard: React.FC<CardProps> = ({ title, imageurl}) => {
+const InfoCard: React.FC<CardProps> = ({ title, imageurl }) => {
   
   const parts = title.split(/(-|\(|\))/).map(part => part.trim()).filter(Boolean);
-
 
   return (
     <motion.div
@@ -21,29 +19,33 @@ const InfoCard: React.FC<CardProps> = ({ title, imageurl}) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="group relative rounded-lg overflow-hidden shadow-lg h-full bg-gray-800 text-white flex flex-col"
+      className="group relative rounded-xl overflow-hidden shadow-lg h-60 w-90 bg-gray-900 text-white flex flex-col justify-center items-center p-6 text-center"
     >
-      <div className="flex-shrink-0 h-48 bg-gray-100 overflow-hidden flex items-center justify-center relative">
-        <Image
-          src={imageurl}
-          alt={title}
-          fill
-          className="object-cover"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = '/images/IITJ/logo/iitjlogo.png';
-          }}
-        />
-      </div>
-      <div className="p-6 flex-grow flex flex-col justify-center">
-        <h3 className="text-xl font-semibold text-gray-800 text-center">
+      {/* Background Image with Zoom Effect */}
+      <Image
+        src={imageurl}
+        alt={title}
+        fill
+        className="object-fit absolute inset-0 z-0 transition-transform duration-500 ease-in-out group-hover:scale-110"
+        onError={(e) => {
+          const target = e.target as HTMLImageElement;
+          target.src = '/images/IITJ/logo/iitjlogo.png';
+        }}
+      />
+      
+      {/* Glass Effect Overlay */}
+      <div className="absolute inset-0 z-10 bg-black/40 backdrop-blur-[2px] transition-all duration-300 group-hover:bg-black/60 group-hover:backdrop-blur-[4px]"></div>
+
+      {/* Text Content */}
+      <div className="relative z-20 flex flex-col justify-center items-center">
+        <h3 className="text-3xl font-semibold text-white drop-shadow-lg">
           {parts.map((part, index) => {
             if (part === '-' || part === '(' || part === ')') return null;
             const isName = parts[index - 1] === '-';
             const isAcronym = parts[index - 1] === '(';
 
             return (
-              <span key={index} className={`block ${isName || isAcronym ? 'mt-1 text-gray-600 font-medium' : ''}`}>
+              <span key={index} className={`block ${isName || isAcronym ? 'mt-1 text-gray-200 font-large text-base' : ''}`}>
                 {part}
               </span>
             );

@@ -53,7 +53,7 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
 
   const cardHoverVariant = {
     scale: 1.05, 
-    boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.25)", 
+    boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.15)", 
     y: -5, 
     transition: {
       type: "spring" as const, 
@@ -62,13 +62,12 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
     },
   };
 
-
   return (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 80 }}
       animate={controls}
-      className="w-full py-8 bg-gray-900"
+      className="w-full py-8 bg-gray-800"
     >
       <h2 className="w-full text-center text-3xl font-bold mb-8 text-fulvous">{marqueeTitle}</h2>
       <div className="flex flex-col gap-4">
@@ -103,7 +102,7 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
                 {row.map((item, i) => (
                   <motion.div
                     key={i}
-                    className="flex items-center gap-x-4 bg-gray-700 rounded-lg shadow-md px-4 py-3 mx-4 min-w-[220px] h-[80px] border border-gray-700 hover:shadow-fulvous/20 hover:border-fulvous/50 transition-all duration-10"
+                    className="flex items-center gap-x-4 bg-gray-600 rounded-lg shadow-md px-4 py-3 mx-4 min-w-[220px] h-[80px] border border-gray-200 hover:shadow-black-500/20 hover:border-fulvous transition-all duration-50"
                     whileHover={cardHoverVariant}
                     initial={false}
                   >
@@ -118,7 +117,7 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
                         e.currentTarget.src = '/images/IITJ/logo/iitjlogo.png'; // Fallback
                       }}
                     />
-                    <span className="w-full text-base font-medium text-center text-gray-200">{item.title}</span>
+                    <span className="w-full text-base font-medium text-center text-white">{item.title}</span>
                   </motion.div>
                 ))}
               </div>

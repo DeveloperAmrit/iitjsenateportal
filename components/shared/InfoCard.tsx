@@ -19,7 +19,8 @@ const InfoCard: React.FC<CardProps> = ({ title, imageurl }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="group relative rounded-xl overflow-hidden shadow-lg h-60 w-90 bg-gray-900 text-white flex flex-col justify-center items-center p-6 text-center"
+      className="group relative rounded-xl overflow-hidden shadow-lg h-65 w-90 bg-gradient-to-b from-black/70 via-black/50 to-black/90 text-white flex flex-col justify-center items-center p-6 text-center"
+      //className="group relative rounded-lg overflow-hidden shadow-lg h-full bg-gray-100 text-white flex flex-col"
     >
       {/* Background Image with Zoom Effect */}
       <Image

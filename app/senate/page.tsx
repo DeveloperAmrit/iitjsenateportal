@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import PersonCard from '@/components/shared/PersonCard';
-import { genSecs, vps, clubMembers } from '@/data/people';
-import { ChevronLeftCircle } from 'lucide-react';
+import { people, clubMembers } from '@/data/people';
+import { ChevronLeftCircle, Search } from 'lucide-react';
 
 // Define the structure for a person's data
 interface Person {
   id: number;
   name: string;
-  position: string;
+  pors: string[];
   email: string;
   phone: string;
   links: {
@@ -17,6 +17,8 @@ interface Person {
     instagram?: string;
   };
   image: string;
+  category: string;
+  club?: string;
 }
 
 // Define the structure for a club
@@ -36,7 +38,15 @@ const Section: React.FC<{ id: string; title: string; children: React.ReactNode }
 // Main component for the Senate page
 const SenatePage = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
   const navRef = useRef<HTMLDivElement>(null);
+
+  const filteredPeople = useMemo(() => {
+    if (!searchTerm) return [];
+    return people.filter(person =>
+      person.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [searchTerm]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -78,6 +88,9 @@ const SenatePage = () => {
     );
   };
 
+  const genSecs = useMemo(() => people.filter(p => p.category === 'gen-sec'), []);
+  const vps = useMemo(() => people.filter(p => p.category === 'vp'), []);
+
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Quick Navigation */}
@@ -113,35 +126,66 @@ const SenatePage = () => {
          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-fulvous/10 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight">
-            TEAM MEMBERS
+            MEET THE SENATE
           </h1>
           <p className="text-sm text-gray-400">
-            HOME / <span className="text-white font-medium">TEAM MEMBERS</span>
+            TEAM MEMBERS<span className="text-white font-medium"></span>
           </p>
+          <div className="mt-8 max-w-lg mx-auto">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search for a member..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full bg-gray-800/50 border-2 border-gray-700 rounded-full py-3 pl-12 pr-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-fulvous focus:border-transparent transition-all"
+              />
+              <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
+                <Search className="w-5 h-5 text-gray-400" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Main content with organized sections */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <Section id="gen-secs" title="General Secretaries">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {genSecs.map((person) => (
-              <PersonCard key={person.id} person={person} />
-            ))}
-          </div>
-        </Section>
+        {searchTerm.trim() !== '' ? (
+          <section id="search-results">
+            <h2 className="text-3xl font-bold text-fulvous mb-8 text-center">Search Results</h2>
+            {filteredPeople.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                {filteredPeople.map((person) => (
+                  <PersonCard key={person.id} person={person} />
+                ))}
+              </div>
+            ) : (
+              <p className="text-center text-gray-400 text-lg">No members found matching your search.</p>
+            )}
+          </section>
+        ) : (
+          <>
+            <Section id="gen-secs" title="General Secretaries">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {genSecs.map((person) => (
+                  <PersonCard key={person.id} person={person} />
+                ))}
+              </div>
+            </Section>
 
-        <Section id="vps" title="Vice Presidents">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {vps.map((person) => (
-              <PersonCard key={person.id} person={person} />
-            ))}
-          </div>
-        </Section>
+            <Section id="vps" title="Vice Presidents">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                {vps.map((person) => (
+                  <PersonCard key={person.id} person={person} />
+                ))}
+              </div>
+            </Section>
 
-        {renderClubSection(clubMembers.technicalClubs, "tech-clubs", "Technical Clubs")}
-        {renderClubSection(clubMembers.culturalClubs, "cultural-clubs", "Cultural Clubs")}
-        {renderClubSection(clubMembers.sportsClubs, "sports-clubs", "Sports Clubs")}
+            {renderClubSection(clubMembers.technicalClubs, "tech-clubs", "Technical Clubs")}
+            {renderClubSection(clubMembers.culturalClubs, "cultural-clubs", "Cultural Clubs")}
+            {renderClubSection(clubMembers.sportsClubs, "sports-clubs", "Sports Clubs")}
+          </>
+        )}
       </div>
     </div>
   );

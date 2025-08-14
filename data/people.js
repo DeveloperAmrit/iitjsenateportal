@@ -1,8 +1,9 @@
-export const genSecs = [
+export const people = [
   {
     id: 1,
     name: "Yash Golani",
-    position: "General Secretary, ACAC",
+    pors: ["General Secretary, ACAC"],
+    category: "gen-sec",
     email: "gensecy_acac@iitj.ac.in",
     phone: "+91 1234567890",
     links: {
@@ -14,7 +15,8 @@ export const genSecs = [
   {
     id: 2,
     name: "Tharakdatta Hegde",
-    position: "General Secretary, Student Senate",
+    pors: ["General Secretary, Student Senate"],
+    category: "gen-sec",
     email: "gensecy_ss@iitj.ac.in",
     phone: "+91 1234567890",
     links: {
@@ -26,7 +28,8 @@ export const genSecs = [
   {
     id: 3,
     name: "Manas Chechani",
-    position: "General Secretary, SAC",
+    pors: ["General Secretary, SAC"],
+    category: "gen-sec",
     email: "gensecy_sac@iitj.ac.in",
     phone: "+91 1234567890",
     links: {
@@ -34,14 +37,12 @@ export const genSecs = [
       instagram: "https://www.instagram.com/manas_chechani/"
     },
     image: "/images/people/manas_chechani.jpg"
-  }
-];
-
-export const vps = [
+  },
   {
     id: 4,
     name: "Krish Teckchandani",
-    position: "Vice President, BAI",
+    pors: ["Vice President, BAI"],
+    category: "vp",
     email: "vp_bai@iitj.ac.in",
     phone: "+91 1234567890",
     links: {},
@@ -50,7 +51,8 @@ export const vps = [
   {
     id: 5,
     name: "Sourav Chahar",
-    position: "Vice President, BDS",
+    pors: ["Vice President, BDS"],
+    category: "vp",
     email: "vp_bds@iitj.ac.in",
     phone: "+91 1234567890",
     links: {},
@@ -59,7 +61,8 @@ export const vps = [
   {
     id: 6,
     name: "Anchitya Kumar",
-    position: "Vice President, BCD",
+    pors: ["Vice President, BCD"],
+    category: "vp",
     email: "vp_bcd@iitj.ac.in",
     phone: "+91 1234567890",
     links: {},
@@ -68,7 +71,8 @@ export const vps = [
   {
     id: 7,
     name: "Raghuveer Kulkarni",
-    position: "Vice President, SAA",
+    pors: ["Vice President, SAA"],
+    category: "vp",
     email: "vp_saa@iitj.ac.in",
     phone: "+91 1234567890",
     links: {},
@@ -77,7 +81,8 @@ export const vps = [
   {
     id: 8,
     name: "Vyom Shah",
-    position: "Vice President, BIE",
+    pors: ["Vice President, BIE"],
+    category: "vp",
     email: "vp_bie@iitj.ac.in",
     phone: "+91 1234567890",
     links: {},
@@ -86,7 +91,8 @@ export const vps = [
   {
     id: 9,
     name: "Sambhav Jha",
-    position: "Vice President, BCCA",
+    pors: ["Vice President, BCCA"],
+    category: "vp",
     email: "vp_bcca@iitj.ac.in",
     phone: "+91 1234567890",
     links: {},
@@ -95,7 +101,8 @@ export const vps = [
   {
     id: 10,
     name: "Vaibhav Singh",
-    position: "Vice President, BAC",
+    pors: ["Vice President, BAC"],
+    category: "vp",
     email: "vp_bac@iitj.ac.in",
     phone: "+91 1234567890",
     links: {},
@@ -104,7 +111,8 @@ export const vps = [
   {
     id: 11,
     name: "Sudhanshu Tamhankar",
-    position: "Vice President, BSS",
+    pors: ["Vice President, BSS"],
+    category: "vp",
     email: "vp_bss@iitj.ac.in",
     phone: "+91 1234567890",
     links: {},
@@ -113,7 +121,8 @@ export const vps = [
   {
     id: 12,
     name: "Anshit Agarwal",
-    position: "Vice President, BLA",
+    pors: ["Vice President, BLA"],
+    category: "vp",
     email: "vp_bla@iitj.ac.in",
     phone: "+91 1234567890",
     links: {},
@@ -122,8 +131,52 @@ export const vps = [
   {
     id: 13,
     name: "Harsh Kumar",
-    position: "Vice President, BHA",
+    pors: ["Vice President, BHA"],
+    category: "vp",
     email: "vp_bha@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 14,
+    name: "Person A",
+    pors: ["Coordinator, Devlup Labs", "Vice President, BSS"],
+    category: "technical-club",
+    email: "person.a@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 15,
+    name: "Person B",
+    pors: ["Coordinator, Robotics Society"],
+    category: "technical-club",
+    club: "Robotics Society",
+    email: "person.b@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 16,
+    name: "Person C",
+    pors: ["Coordinator, The Groove Theory"],
+    category: "cultural-club",
+    club: "The Groove Theory",
+    email: "person.c@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 17,
+    name: "Person D",
+    pors: ["Coordinator, Cricket Society"],
+    category: "sports-club",
+    club: "Cricket Society",
+    email: "person.d@iitj.ac.in",
     phone: "+91 1234567890",
     links: {},
     image: "/images/people/default.jpg"
@@ -131,66 +184,28 @@ export const vps = [
 ];
 
 export const clubMembers = {
-  technicalClubs: [
-    {
-      clubName: "Devlup Labs",
-      members: [
-        {
-          id: 14,
-          name: "Person A",
-          position: "Coordinator",
-          email: "person.a@iitj.ac.in",
-          phone: "+91 1234567890",
-          links: {},
-          image: "/images/people/default.jpg"
-        }
-      ]
-    },
-    {
-      clubName: "Robotics Society",
-      members: [
-        {
-          id: 15,
-          name: "Person B",
-          position: "Coordinator",
-          email: "person.b@iitj.ac.in",
-          phone: "+91 1234567890",
-          links: {},
-          image: "/images/people/default.jpg"
-        }
-      ]
-    }
-  ],
-  culturalClubs: [
-    {
-      clubName: "The Groove Theory",
-      members: [
-        {
-          id: 16,
-          name: "Person C",
-          position: "Coordinator",
-          email: "person.c@iitj.ac.in",
-          phone: "+91 1234567890",
-          links: {},
-          image: "/images/people/default.jpg"
-        }
-      ]
-    }
-  ],
-  sportsClubs: [
-    {
-      clubName: "Cricket Society",
-      members: [
-        {
-          id: 17,
-          name: "Person D",
-          position: "Coordinator",
-          email: "person.d@iitj.ac.in",
-          phone: "+91 1234567890",
-          links: {},
-          image: "/images/people/default.jpg"
-        }
-      ]
-    }
-  ]
+  technicalClubs: people.filter(p => p.category === 'technical-club').reduce((acc, curr) => {
+      const clubName = curr.club || curr.pors.find(p => p.includes('Coordinator'))?.split(', ')[1] || 'Unknown';
+      if (!acc.find(c => c.clubName === clubName)) {
+          acc.push({ clubName, members: [] });
+      }
+      acc.find(c => c.clubName === clubName)?.members.push(curr);
+      return acc;
+  }, []),
+  culturalClubs: people.filter(p => p.category === 'cultural-club').reduce((acc, curr) => {
+      const clubName = curr.club || curr.pors.find(p => p.includes('Coordinator'))?.split(', ')[1] || 'Unknown';
+      if (!acc.find(c => c.clubName === clubName)) {
+          acc.push({ clubName, members: [] });
+      }
+      acc.find(c => c.clubName === clubName)?.members.push(curr);
+      return acc;
+  }, []),
+  sportsClubs: people.filter(p => p.category === 'sports-club').reduce((acc, curr) => {
+      const clubName = curr.club || curr.pors.find(p => p.includes('Coordinator'))?.split(', ')[1] || 'Unknown';
+      if (!acc.find(c => c.clubName === clubName)) {
+          acc.push({ clubName, members: [] });
+      }
+      acc.find(c => c.clubName === clubName)?.members.push(curr);
+      return acc;
+  }, []),
 };

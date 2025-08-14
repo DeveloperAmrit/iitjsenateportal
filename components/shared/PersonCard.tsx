@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Linkedin, Instagram, Mail } from 'lucide-react';
 
@@ -8,7 +7,7 @@ import { Linkedin, Instagram, Mail } from 'lucide-react';
 interface Person {
   id: number;
   name: string;
-  position: string;
+  pors: string[];
   email: string;
   phone: string;
   links: {
@@ -30,15 +29,14 @@ const PersonCard: React.FC<{ person: Person }> = ({ person }) => {
     >
       <div className="relative aspect-[4/5] w-full">
         {/* Member's Image with effects */}
-        <Image
+        <img
           src={person.image}
           alt={person.name}
-          fill
-          className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out group-hover:scale-110"
+          className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out group-hover:scale-110"
           onError={(e) => {
             // Fallback to a default image if the provided one fails
-            e.currentTarget.onerror = null; 
-            e.currentTarget.src = '/images/holders/students/placeholder.jpg';
+            (e.target as HTMLImageElement).onerror = null; 
+            (e.target as HTMLImageElement).src = '/images/holders/students/placeholder.jpg';
           }}
         />
         {/* Hover overlay for social media links */}
@@ -61,10 +59,14 @@ const PersonCard: React.FC<{ person: Person }> = ({ person }) => {
         </div>
       </div>
       {/* Member's details */}
-      <div className="p-4 text-center bg-gray-800 flex-grow flex flex-col justify-between">
+      <div className="p-4 text-center bg-gray-800 flex-grow flex flex-col justify-center">
         <div>
           <h3 className="text-lg font-semibold text-white">{person.name}</h3>
-          <p className="text-sm text-gray-400">{person.position}</p>
+          <div className="mt-1">
+            {person.pors.map((por, index) => (
+              <p key={index} className="text-sm text-gray-400 leading-tight">{por}</p>
+            ))}
+          </div>
         </div>
       </div>
     </motion.div>

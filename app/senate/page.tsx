@@ -113,10 +113,10 @@ const SenatePage = () => {
          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-fulvous/10 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight">
-            MEET THE SENATE
+            TEAM MEMBERS
           </h1>
           <p className="text-sm text-gray-400">
-            Get to know the dedicated student leaders who represent your interests and enhance campus life at IIT Jodhpur.
+            HOME / <span className="text-white font-medium">TEAM MEMBERS</span>
           </p>
         </div>
       </div>

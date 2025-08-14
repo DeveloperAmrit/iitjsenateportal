@@ -42,12 +42,12 @@ const Cards: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-16 py-10 bg-gray-900 text-white">
+    <div className="flex flex-col items-center gap-16 py-10 bg-gray-300 text-white">
       <CardGrid title="Councils under the Student Body" cols={3} items={councilItems} />
       <CardGrid title="Boards under ACAC" cols={3} items={acacItems} />
 
       <section className="w-full max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-10 text-center text-fulvous">Boards under SAC</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center text-gray-900">Boards under SAC</h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {sacItems.map((item, i) => (
             <InfoCard key={i} title={item.title} imageurl={item.imageurl}/>

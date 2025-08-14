@@ -21,7 +21,7 @@ const InfoCard: React.FC<CardProps> = ({ title, imageurl}) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="group relative rounded-lg overflow-hidden shadow-lg h-full bg-gray-800 text-white flex flex-col"
+      className="group relative rounded-lg overflow-hidden shadow-lg h-full bg-gray-100 text-white flex flex-col"
     >
       <div className="flex-shrink-0 h-48 bg-gray-100 overflow-hidden flex items-center justify-center relative">
         <Image

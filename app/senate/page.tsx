@@ -129,13 +129,13 @@ const SenatePage = () => {
             MEET THE SENATE
           </h1>
           <p className="text-sm text-gray-400">
-            TEAM MEMBERS<span className="text-white font-medium"></span>
+            STUDENT SENATE TEAM MEMBERS<span className="text-white font-medium"></span>
           </p>
           <div className="mt-8 max-w-lg mx-auto">
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search for a member..."
+                placeholder="Search for a member...."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full bg-gray-800/50 border-2 border-gray-700 rounded-full py-3 pl-12 pr-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-fulvous focus:border-transparent transition-all"

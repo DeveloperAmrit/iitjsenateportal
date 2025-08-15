@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/events", label: "Events" },
   { href: "https://iitj.ac.in/PageImages/Gallery/07-2025/Academic-Calendar-AY-202526SemI2-with-CCCD-events-638871414539740843.pdf", label: "Calendar" },
   { href: "/pdfs/constitution.pdf", label: "Constitution" },
-  { href: "/visit-iitj", label: "Visit IITJ" }
+  { href: "https://www.iitj.ac.in/main/en/iitj", label: "Visit IITJ" }
 ]
 
 export default function Navbar() {

@@ -27,7 +27,7 @@ const PersonCard: React.FC<{ person: Person }> = ({ person }) => {
       viewport={{ once: true, amount: 0.3 }}
       className="group relative overflow-hidden rounded-lg shadow-lg bg-gray-800 border border-gray-700/50 flex flex-col h-full"
     >
-      <div className="relative aspect-[4/5] w-full">
+      <div className="relative aspect-[4/5] w-full overflow-hidden">
         {/* Member's Image with effects */}
         <img
           src={person.image}
@@ -36,7 +36,7 @@ const PersonCard: React.FC<{ person: Person }> = ({ person }) => {
           onError={(e) => {
             // Fallback to a default image if the provided one fails
             (e.target as HTMLImageElement).onerror = null; 
-            (e.target as HTMLImageElement).src = '/images/holders/students/placeholder.jpg';
+            (e.target as HTMLImageElement).src = '/images/IITJ/logo/iitjlogo.png';
           }}
         />
         {/* Hover overlay for social media links */}

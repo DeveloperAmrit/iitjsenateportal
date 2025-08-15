@@ -67,9 +67,9 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
       ref={ref}
       initial={{ opacity: 0, y: 80 }}
       animate={controls}
-      className="w-full py-8 bg-gray-200"
+      className="w-full py-8 bg-gray-800"
     >
-      <h2 className="w-full text-center text-3xl font-bold mb-8 text-gray-900">{marqueeTitle}</h2>
+      <h2 className="w-full text-center text-3xl font-bold mb-8 text-fulvous">{marqueeTitle}</h2>
       <div className="flex flex-col gap-4">
         {rows.map((row, idx) => (
           <div
@@ -102,7 +102,7 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
                 {row.map((item, i) => (
                   <motion.div
                     key={i}
-                    className="flex items-center gap-x-4 bg-white rounded-lg shadow-md px-4 py-3 mx-4 min-w-[220px] h-[80px] border border-gray-200 hover:shadow-blue-500/20 hover:border-blue-500/50 transition-all duration-300"
+                    className="flex items-center gap-x-4 bg-gray-600 rounded-lg shadow-md px-4 py-3 mx-4 min-w-[220px] h-[80px] border border-gray-200 hover:shadow-black-500/20 hover:border-fulvous transition-all duration-50"
                     whileHover={cardHoverVariant}
                     initial={false}
                   >
@@ -117,7 +117,7 @@ const InfiniteMarquee: React.FC<InfiniteMarqueeProps> = ({
                         e.currentTarget.src = '/images/IITJ/logo/iitjlogo.png'; // Fallback
                       }}
                     />
-                    <span className="w-full text-base font-medium text-center text-gray-800">{item.title}</span>
+                    <span className="w-full text-base font-medium text-center text-white">{item.title}</span>
                   </motion.div>
                 ))}
               </div>

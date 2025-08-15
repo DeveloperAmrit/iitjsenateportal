@@ -1,365 +1,211 @@
-// Student Senate Position Holders Data
-
-export const genSecs = [
+export const people = [
   {
     id: 1,
-    name: "John Doe",
-    position: "General Secretary - Student Affairs",
-    email: "gensec.sa@iitj.ac.in",
-    phone: "+91 9876543210",
+    name: "Yash Golani",
+    pors: ["General Secretary, ACAC"],
+    category: "gen-sec",
+    email: "gensecy_acac@iitj.ac.in",
+    phone: "+91 1234567890",
     links: {
-      linkedin: "https://linkedin.com/in/johndoe",
-      instagram: "https://instagram.com/johndoe"
+      linkedin: "https://www.linkedin.com/in/yash-golani/",
+      instagram: "https://www.instagram.com/yash_golani/"
     },
-    image: "/images/holders/students/placeholder.svg"
+    image: "/images/people/yash_golani.jpg"
   },
   {
     id: 2,
-    name: "Jane Smith",
-    position: "General Secretary - Academic Affairs",
-    email: "gensec.aa@iitj.ac.in",
-    phone: "+91 9876543211",
+    name: "Tharakdatta Hegde",
+    pors: ["General Secretary, Student Senate"],
+    category: "gen-sec",
+    email: "gensecy_ss@iitj.ac.in",
+    phone: "+91 1234567890",
     links: {
-      linkedin: "https://linkedin.com/in/janesmith",
-      instagram: "https://instagram.com/janesmith"
+      linkedin: "https://www.linkedin.com/in/tharakdatta-hegde/",
+      instagram: "https://www.instagram.com/tharakdatta_hegde/"
     },
-    image: "/images/holders/students/placeholder.svg"
+    image: "/images/people/tharakdatta_hegde.jpg"
   },
   {
     id: 3,
-    name: "Jane Smith",
-    position: "General Secretary - Academic Affairs",
-    email: "gensec.aa@iitj.ac.in",
-    phone: "+91 9876543211",
+    name: "Manas Chechani",
+    pors: ["General Secretary, SAC"],
+    category: "gen-sec",
+    email: "gensecy_sac@iitj.ac.in",
+    phone: "+91 1234567890",
     links: {
-      linkedin: "https://linkedin.com/in/janesmith",
-      instagram: "https://instagram.com/janesmith"
+      linkedin: "https://www.linkedin.com/in/manas-chechani/",
+      instagram: "https://www.instagram.com/manas_chechani/"
     },
-    image: "/images/holders/students/placeholder.svg"
-  },
-];
-
-export const vps = [
-  {
-    id: 1,
-    name: "Mike Johnson",
-    position: "Vice President - Student Affairs",
-    email: "vp.sa@iitj.ac.in",
-    phone: "+91 9876543212",
-    links: {
-      linkedin: "https://linkedin.com/in/mikejohnson",
-      instagram: "https://instagram.com/mikejohnson"
-    },
-    image: "/images/holders/students/placeholder.svg"
-  },
-  {
-    id: 2,
-    name: "Sarah Wilson",
-    position: "Vice President - Academic Affairs",
-    email: "vp.aa@iitj.ac.in",
-    phone: "+91 9876543213",
-    links: {
-      linkedin: "https://linkedin.com/in/sarahwilson",
-      instagram: "https://instagram.com/sarahwilson"
-    },
-    image: "/images/holders/students/placeholder.svg"
-  },
-  {
-    id: 3,
-    name: "Mike Johnson",
-    position: "Vice President - Student Affairs",
-    email: "vp.sa@iitj.ac.in",
-    phone: "+91 9876543212",
-    links: {
-      linkedin: "https://linkedin.com/in/mikejohnson",
-      instagram: "https://instagram.com/mikejohnson"
-    },
-    image: "/images/holders/students/placeholder.svg"
+    image: "/images/people/manas_chechani.jpg"
   },
   {
     id: 4,
-    name: "Sarah Wilson",
-    position: "Vice President - Academic Affairs",
-    email: "vp.aa@iitj.ac.in",
-    phone: "+91 9876543213",
-    links: {
-      linkedin: "https://linkedin.com/in/sarahwilson",
-      instagram: "https://instagram.com/sarahwilson"
-    },
-    image: "/images/holders/students/placeholder.svg"
+    name: "Krish Teckchandani",
+    pors: ["Vice President, BAI"],
+    category: "vp",
+    email: "vp_bai@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
   },
   {
     id: 5,
-    name: "Mike Johnson",
-    position: "Vice President - Student Affairs",
-    email: "vp.sa@iitj.ac.in",
-    phone: "+91 9876543212",
-    links: {
-      linkedin: "https://linkedin.com/in/mikejohnson",
-      instagram: "https://instagram.com/mikejohnson"
-    },
-    image: "/images/holders/students/placeholder.svg"
+    name: "Sourav Chahar",
+    pors: ["Vice President, BDS"],
+    category: "vp",
+    email: "vp_bds@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
   },
   {
     id: 6,
-    name: "Sarah Wilson",
-    position: "Vice President - Academic Affairs",
-    email: "vp.aa@iitj.ac.in",
-    phone: "+91 9876543213",
-    links: {
-      linkedin: "https://linkedin.com/in/sarahwilson",
-      instagram: "https://instagram.com/sarahwilson"
-    },
-    image: "/images/holders/students/placeholder.svg"
+    name: "Anchitya Kumar",
+    pors: ["Vice President, BCD"],
+    category: "vp",
+    email: "vp_bcd@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
   },
+  {
+    id: 7,
+    name: "Raghuveer Kulkarni",
+    pors: ["Vice President, SAA"],
+    category: "vp",
+    email: "vp_saa@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 8,
+    name: "Vyom Shah",
+    pors: ["Vice President, BIE"],
+    category: "vp",
+    email: "vp_bie@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 9,
+    name: "Sambhav Jha",
+    pors: ["Vice President, BCCA"],
+    category: "vp",
+    email: "vp_bcca@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 10,
+    name: "Vaibhav Singh",
+    pors: ["Vice President, BAC"],
+    category: "vp",
+    email: "vp_bac@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 11,
+    name: "Sudhanshu Tamhankar",
+    pors: ["Vice President, BSS"],
+    category: "vp",
+    email: "vp_bss@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 12,
+    name: "Anshit Agarwal",
+    pors: ["Vice President, BLA"],
+    category: "vp",
+    email: "vp_bla@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 13,
+    name: "Harsh Kumar",
+    pors: ["Vice President, BHA"],
+    category: "vp",
+    email: "vp_bha@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 14,
+    name: "Person A",
+    pors: ["Coordinator, Devlup Labs", "Vice President, BSS"],
+    category: "technical-club",
+    email: "person.a@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 15,
+    name: "Person B",
+    pors: ["Coordinator, Robotics Society"],
+    category: "technical-club",
+    club: "Robotics Society",
+    email: "person.b@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 16,
+    name: "Person C",
+    pors: ["Coordinator, The Groove Theory"],
+    category: "cultural-club",
+    club: "The Groove Theory",
+    email: "person.c@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  },
+  {
+    id: 17,
+    name: "Person D",
+    pors: ["Coordinator, Cricket Society"],
+    category: "sports-club",
+    club: "Cricket Society",
+    email: "person.d@iitj.ac.in",
+    phone: "+91 1234567890",
+    links: {},
+    image: "/images/people/default.jpg"
+  }
 ];
 
 export const clubMembers = {
-  technicalClubs: [
-    {
-      clubName: "Robotics Club",
-      members: [
-        {
-          id: 1,
-          name: "Alex Chen",
-          position: "Head",
-          email: "head.robotics@iitj.ac.in",
-          phone: "+91 9876543214",
-          links: {
-            linkedin: "https://linkedin.com/in/alexchen",
-            instagram: "https://instagram.com/alexchen"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-        {
-          id: 2,
-          name: "Priya Sharma",
-          position: "Overall Coordinator",
-          email: "coord.robotics@iitj.ac.in",
-          phone: "+91 9876543215",
-          links: {
-            linkedin: "https://linkedin.com/in/priyasharma",
-            instagram: "https://instagram.com/priyasharma"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-        {
-          id: 3,
-          name: "Raj Patel",
-          position: "Member",
-          email: "raj.robotics@iitj.ac.in",
-          phone: "+91 9876543216",
-          links: {
-            linkedin: "https://linkedin.com/in/rajpatel",
-            instagram: "https://instagram.com/rajpatel"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-        {
-          id: 4,
-          name: "Alex Chen",
-          position: "Member",
-          email: "head.robotics@iitj.ac.in",
-          phone: "+91 9876543214",
-          links: {
-            linkedin: "https://linkedin.com/in/alexchen",
-            instagram: "https://instagram.com/alexchen"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-        {
-          id: 5,
-          name: "Priya Sharma",
-          position: "Member",
-          email: "coord.robotics@iitj.ac.in",
-          phone: "+91 9876543215",
-          links: {
-            linkedin: "https://linkedin.com/in/priyasharma",
-            instagram: "https://instagram.com/priyasharma"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-        {
-          id: 6,
-          name: "Raj Patel",
-          position: "Member",
-          email: "raj.robotics@iitj.ac.in",
-          phone: "+91 9876543216",
-          links: {
-            linkedin: "https://linkedin.com/in/rajpatel",
-            instagram: "https://instagram.com/rajpatel"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-      ]
-    },
-    {
-      clubName: "Programming Club",
-      members: [
-        {
-          id: 1,
-          name: "David Kumar",
-          position: "Head",
-          email: "head.programming@iitj.ac.in",
-          phone: "+91 9876543217",
-          links: {
-            linkedin: "https://linkedin.com/in/davidkumar",
-            instagram: "https://instagram.com/davidkumar"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-        {
-          id: 2,
-          name: "Lisa Zhang",
-          position: "Overall Coordinator",
-          email: "coord.programming@iitj.ac.in",
-          phone: "+91 9876543218",
-          links: {
-            linkedin: "https://linkedin.com/in/lisazhang",
-            instagram: "https://instagram.com/lisazhang"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-        {
-          id: 3,
-          name: "Amit Verma",
-          position: "Member",
-          email: "amit.programming@iitj.ac.in",
-          phone: "+91 9876543219",
-          links: {
-            linkedin: "https://linkedin.com/in/amitverma",
-            instagram: "https://instagram.com/amitverma"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        }
-      ]
-    }
-  ],
-  culturalClubs: [
-    {
-      clubName: "Music Club",
-      members: [
-        {
-          id: 1,
-          name: "Rahul Gupta",
-          position: "Head",
-          email: "head.music@iitj.ac.in",
-          phone: "+91 9876543220",
-          links: {
-            linkedin: "https://linkedin.com/in/rahulgupta",
-            instagram: "https://instagram.com/rahulgupta"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-        {
-          id: 2,
-          name: "Sneha Roy",
-          position: "Overall Coordinator",
-          email: "coord.music@iitj.ac.in",
-          phone: "+91 9876543221",
-          links: {
-            linkedin: "https://linkedin.com/in/sneharoy",
-            instagram: "https://instagram.com/sneharoy"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-        {
-          id: 3,
-          name: "Vikram Singh",
-          position: "Member",
-          email: "vikram.music@iitj.ac.in",
-          phone: "+91 9876543222",
-          links: {
-            linkedin: "https://linkedin.com/in/vikramsingh",
-            instagram: "https://instagram.com/vikramsingh"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        }
-      ]
-    },
-    {
-      clubName: "Drama Club",
-      members: [
-        {
-          id: 1,
-          name: "Kavya Nair",
-          position: "Head",
-          email: "head.drama@iitj.ac.in",
-          phone: "+91 9876543223",
-          links: {
-            linkedin: "https://linkedin.com/in/kavyanair",
-            instagram: "https://instagram.com/kavyanair"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-        {
-          id: 2,
-          name: "Arjun Reddy",
-          position: "Overall Coordinator",
-          email: "coord.drama@iitj.ac.in",
-          phone: "+91 9876543224",
-          links: {
-            linkedin: "https://linkedin.com/in/arjunreddy",
-            instagram: "https://instagram.com/arjunreddy"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-        {
-          id: 3,
-          name: "Meera Joshi",
-          position: "Member",
-          email: "meera.drama@iitj.ac.in",
-          phone: "+91 9876543225",
-          links: {
-            linkedin: "https://linkedin.com/in/meerajoshi",
-            instagram: "https://instagram.com/meerajoshi"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        }
-      ]
-    }
-  ],
-  sportsClubs: [
-    {
-      clubName: "Cricket Club",
-      members: [
-        {
-          id: 1,
-          name: "Rohit Sharma",
-          position: "Head",
-          email: "head.cricket@iitj.ac.in",
-          phone: "+91 9876543226",
-          links: {
-            linkedin: "https://linkedin.com/in/rohitsharma",
-            instagram: "https://instagram.com/rohitsharma"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-        {
-          id: 2,
-          name: "Virat Kohli",
-          position: "Overall Coordinator",
-          email: "coord.cricket@iitj.ac.in",
-          phone: "+91 9876543227",
-          links: {
-            linkedin: "https://linkedin.com/in/viratkohli",
-            instagram: "https://instagram.com/viratkohli"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        },
-        {
-          id: 3,
-          name: "MS Dhoni",
-          position: "Member",
-          email: "ms.cricket@iitj.ac.in",
-          phone: "+91 9876543228",
-          links: {
-            linkedin: "https://linkedin.com/in/msdhoni",
-            instagram: "https://instagram.com/msdhoni"
-          },
-          image: "/images/holders/students/placeholder.svg"
-        }
-      ]
-    }
-  ]
+  technicalClubs: people.filter(p => p.category === 'technical-club').reduce((acc, curr) => {
+      const clubName = curr.club || curr.pors.find(p => p.includes('Coordinator'))?.split(', ')[1] || 'Unknown';
+      if (!acc.find(c => c.clubName === clubName)) {
+          acc.push({ clubName, members: [] });
+      }
+      acc.find(c => c.clubName === clubName)?.members.push(curr);
+      return acc;
+  }, []),
+  culturalClubs: people.filter(p => p.category === 'cultural-club').reduce((acc, curr) => {
+      const clubName = curr.club || curr.pors.find(p => p.includes('Coordinator'))?.split(', ')[1] || 'Unknown';
+      if (!acc.find(c => c.clubName === clubName)) {
+          acc.push({ clubName, members: [] });
+      }
+      acc.find(c => c.clubName === clubName)?.members.push(curr);
+      return acc;
+  }, []),
+  sportsClubs: people.filter(p => p.category === 'sports-club').reduce((acc, curr) => {
+      const clubName = curr.club || curr.pors.find(p => p.includes('Coordinator'))?.split(', ')[1] || 'Unknown';
+      if (!acc.find(c => c.clubName === clubName)) {
+          acc.push({ clubName, members: [] });
+      }
+      acc.find(c => c.clubName === clubName)?.members.push(curr);
+      return acc;
+  }, []),
 };

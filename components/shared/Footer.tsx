@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { Linkedin, Instagram, Mail } from 'lucide-react';
 
 // Define types for weather data
 interface CurrentWeather {
@@ -188,51 +189,42 @@ const Footer: React.FC = () => {
             छात्र सीनेट, आईआईटीजे
           </p>
           <div className="flex flex-col items-center md:items-start text-sm text-gray-300">
-            <a href="mailto:info@iitj.ac.in" className="flex items-center hover:text-white transition mb-1">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 6h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <a href="mailto:gensecy_ss@iitj.ac.in" className="flex items-center hover:text-white transition mb-1">
+              <Mail className="h-4 w-4 mr-2" />
               gensecy_ss@iitj.ac.in
             </a>
-            <a href="mailto:info@iitj.ac.in" className="flex items-center hover:text-white transition mb-1">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 6h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <a href="mailto:gensecy_acac@iitj.ac.in" className="flex items-center hover:text-white transition mb-1">
+              <Mail className="h-4 w-4 mr-2" />
               gensecy_acac@iitj.ac.in
             </a>
-            <a href="mailto:info@iitj.ac.in" className="flex items-center hover:text-white transition mb-1">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 6h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <a href="mailto:gensecy_sac@iitj.ac.in" className="flex items-center hover:text-white transition mb-1">
+              <Mail className="h-4 w-4 mr-2" />
               gensecy_sac@iitj.ac.in
             </a>
           </div>
           <div className="flex gap-4 mt-6">
-            <SocialIcon href="https://twitter.com/IIT_Jodhpur"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.791-1.574 2.164-2.721-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.594 0-6.49 2.903-6.49 6.49 0 .508.058 1.006.173 1.486-5.392-.27-10.19-2.868-13.4-6.812-.558.955-.873 2.073-.873 3.307 0 2.256 1.144 4.243 2.887 5.418-.53-.016-1.03-.162-1.465-.403v.08c0 3.154 2.235 5.786 5.193 6.365-.548.148-1.12.23-1.706.23-.418 0-.823-.041-1.22-.116.823 2.572 3.2 4.45 6.01 4.492-2.203 1.72-4.99 2.756-8.026 2.756-1.55 0-3.047-.09-4.516-.266.863 2.827 3.323 4.744 6.29 4.744 7.247 0 11.205-6 11.205-11.206 0-.174-.004-.349-.012-.523.774-.556 1.44-1.25 1.96-2.045z"/></svg></SocialIcon>
-            <SocialIcon href="https://www.linkedin.com/school/iit-jodhpur/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></SocialIcon>
-            <SocialIcon href="https://www.facebook.com/iitjofficial"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.27 0-5.192 1.501-5.192 4.458v2.542z"/></svg></SocialIcon>
+            <SocialIcon href="https://www.linkedin.com/school/iit-jodhpur/"><Linkedin size={24} /></SocialIcon>
+            <SocialIcon href="https://www.instagram.com/iitj_official"><Instagram size={24} /></SocialIcon>
+            <SocialIcon href="mailto:gensecy_ss@iitj.ac.in"><Mail size={24} /></SocialIcon>
           </div>
         </div>
 
         {/* Column 2: Quick Links */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h3 className="text-xl font-bold mb-4 border-b-2 border-red-500 pb-1">Quick Links</h3>
+          <h3 className="text-xl font-bold mb-4 border-b-2 border-fulvous pb-1">Quick Links</h3>
           <ul className="space-y-2 text-gray-300 text-base">
-            <li><a href="https://www.iitj.ac.in/main/en/iitj" className="hover:text-white transition">Visit IITJ</a></li>
-            <li><a href="#" className="hover:text-white transition">Student Senate</a></li>
-            <li><a href="#" className="hover:text-white transition">Societies and Clubs</a></li>
-            <li><a href="https://iitj.ac.in/PageImages/Gallery/07-2025/Academic-Calendar-AY-202526SemI2-with-CCCD-events-638871414539740843.pdf" className="hover:text-white transition">Student Actvity Calender</a></li>
-            <li><a href="#" className="hover:text-white transition">Student Constitution</a></li>
+            <li><a href="/visit-iitj" className="hover:text-white transition">Visit IITJ</a></li>
+            <li><a href="/societies" className="hover:text-white transition">Student Bodies</a></li>
+            <li><a href="/senate" className="hover:text-white transition">Meet the Senate</a></li>
+            <li><a href="https://iitj.ac.in/PageImages/Gallery/07-2025/Academic-Calendar-AY-202526SemI2-with-CCCD-events-638871414539740843.pdf" className="hover:text-white transition" target="_blank" rel="noopener noreferrer">Activity Calendar</a></li>
+            <li><a href="/pdfs/constitution.pdf" className="hover:text-white transition" target="_blank" rel="noopener noreferrer">Constitution</a></li>
             <li><a href="mailto:student_grievance@iitj.ac.in" className="hover:text-white transition">Student Grievances</a></li>
-            <li>
-                <button
-                    onClick={() => alert("Dark/Light Mode Toggle functionality goes here!")}
-                    className="flex items-center hover:text-white transition cursor-pointer"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h1M3 12H2m8.006 10.006A4.5 4.5 0 0112 17.5a4.5 4.5 0 014.506 4.506M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-                    Switch to Dark Mode
-                </button>
-            </li>
           </ul>
         </div>
 
         {/* Column 3: Explore */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h3 className="text-xl font-bold mb-4 border-b-2 border-red-500 pb-1">Explore</h3>
+          <h3 className="text-xl font-bold mb-4 border-b-2 border-fulvous pb-1">Explore</h3>
           <ul className="space-y-2 text-gray-300 text-base">
             <li><a href="#" className="hover:text-white transition">Rules</a></li>
             <li><a href="#" className="hover:text-white transition">Campus Life</a></li>
@@ -244,7 +236,7 @@ const Footer: React.FC = () => {
 
         {/* Column 4: Weather/Location */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h3 className="text-xl font-bold mb-4 border-b-2 border-red-500 pb-1">Jodhpur Weather</h3>
+          <h3 className="text-xl font-bold mb-4 border-b-2 border-fulvous pb-1">Jodhpur Weather</h3>
           {weatherData ? (
             <div className="space-y-2">
               <p className="text-sm text-gray-300">{weatherData.time}, {weatherData.date}</p>
@@ -280,11 +272,6 @@ const Footer: React.FC = () => {
           </p>
           <div className="flex items-center">
             <p className="mr-4">Developed & Maintained by Student Senate | IIT Jodhpur</p>
-            <button
-              onClick={() => alert("Dark/Light Mode Toggle functionality goes here!")}
-              className="flex items-center text-gray-400 hover:text-white transition cursor-pointer"
-            >              
-            </button>
           </div>
         </div>
       </div>
